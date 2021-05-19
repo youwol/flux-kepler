@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Operations | @youwol/flux-kepler</title>
+	<title>ModuleLoader | @youwol/flux-kepler</title>
 	<meta name="description" content="Documentation for @youwol/flux-kepler">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,16 +55,13 @@
 					<a href="../modules.html">@youwol/flux-kepler</a>
 				</li>
 				<li>
-					<a href="../modules/lib_simple_module_module.html">lib/simple-module.module</a>
+					<a href="lib_loader_module.html">lib/loader.module</a>
 				</li>
 				<li>
-					<a href="../modules/lib_simple_module_module.simplemodule.html">SimpleModule</a>
-				</li>
-				<li>
-					<a href="lib_simple_module_module.simplemodule.operations.html">Operations</a>
+					<a href="lib_loader_module.moduleloader.html">ModuleLoader</a>
 				</li>
 			</ul>
-			<h1>Enumeration Operations</h1>
+			<h1>Namespace ModuleLoader</h1>
 		</div>
 	</div>
 </header>
@@ -74,9 +71,19 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>These are the two operations implemented: you can add additional items here and
-						define their implementation in the <a href="../modules/lib_simple_module_module.simplemodule.html#operationsfactory">operationsFactory</a> variable.</p>
+						<a href="#presentation" id="presentation" style="color: inherit; text-decoration: none;">
+							<h2>Presentation</h2>
+						</a>
 					</div>
+					<p>Import module to create Kepler 3D objects from various sources.</p>
+					<a href="#resources" id="resources" style="color: inherit; text-decoration: none;">
+						<h2>Resources</h2>
+					</a>
+					<p>Various resources:</p>
+					<ul>
+						<li>   <a href="https://github.com/youwol/kepler">kepler</a>: the kepler library</li>
+						<li>   <a href="https://github.com/youwol/io">io</a>: library used to parse data files</li>
+					</ul>
 				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -84,34 +91,30 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Enumeration members</h3>
+							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="lib_simple_module_module.simplemodule.operations.html#addition" class="tsd-kind-icon">ADDITION</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="lib_simple_module_module.simplemodule.operations.html#multiplication" class="tsd-kind-icon">MULTIPLICATION</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-namespace"><a href="../classes/lib_loader_module.moduleloader.module.html" class="tsd-kind-icon">Module</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-namespace"><a href="../classes/lib_loader_module.moduleloader.persistentdata.html" class="tsd-kind-icon">Persistent<wbr>Data</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="lib_loader_module.moduleloader.html#fileexpectation" class="tsd-kind-icon">file<wbr>Expectation</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Enumeration members</h2>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="addition" class="tsd-anchor"></a>
-					<h3>ADDITION</h3>
-					<div class="tsd-signature tsd-kind-icon">ADDITION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;addition&quot;</span></div>
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="fileexpectation" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> file<wbr>Expectation</h3>
+					<div class="tsd-signature tsd-kind-icon">file<wbr>Expectation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BaseExpectation</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">File</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/lib/simple-module.module.ts:45</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="multiplication" class="tsd-anchor"></a>
-					<h3>MULTIPLICATION</h3>
-					<div class="tsd-signature tsd-kind-icon">MULTIPLICATION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;multiplication&quot;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/lib/simple-module.module.ts:46</li>
+							<li>Defined in src/lib/loader.module.ts:54</li>
 						</ul>
 					</aside>
 				</section>
@@ -127,38 +130,14 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-enum tsd-parent-kind-namespace">
-						<a href="lib_simple_module_module.simplemodule.operations.html" class="tsd-kind-icon">Operations</a>
-						<ul>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="lib_simple_module_module.simplemodule.operations.html#addition" class="tsd-kind-icon">ADDITION</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="lib_simple_module_module.simplemodule.operations.html#multiplication" class="tsd-kind-icon">MULTIPLICATION</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-parent-kind-namespace">
-						<a href="../classes/lib_simple_module_module.simplemodule.module.html" class="tsd-kind-icon">Module</a>
+						<a href="../classes/lib_loader_module.moduleloader.module.html" class="tsd-kind-icon">Module</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-namespace">
-						<a href="../classes/lib_simple_module_module.simplemodule.persistentdata.html" class="tsd-kind-icon">Persistent<wbr>Data</a>
+						<a href="../classes/lib_loader_module.moduleloader.persistentdata.html" class="tsd-kind-icon">Persistent<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
-						<a href="../modules/lib_simple_module_module.simplemodule.html#operationsfactory" class="tsd-kind-icon">operations<wbr>Factory</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
-						<a href="../modules/lib_simple_module_module.simplemodule.html#permissivenumber" class="tsd-kind-icon">permissive<wbr>Number</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
-						<a href="../modules/lib_simple_module_module.simplemodule.html#straightnumber" class="tsd-kind-icon">straight<wbr>Number</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-namespace">
-						<a href="../modules/lib_simple_module_module.simplemodule.html#renderhtmlelement" class="tsd-kind-icon">render<wbr>Html<wbr>Element</a>
+						<a href="lib_loader_module.moduleloader.html#fileexpectation" class="tsd-kind-icon">file<wbr>Expectation</a>
 					</li>
 				</ul>
 			</nav>
@@ -173,6 +152,9 @@
 				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 			</ul>
 		</div>
 	</div>
