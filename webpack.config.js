@@ -34,6 +34,22 @@ module.exports = {
         '@youwol/flux-core': "@youwol/flux-core",
         '@youwol/cdn-client': '@youwol/cdn-client',
         '@youwol/flux-view': "@youwol/flux-view",
+        "@youwol/flux-three": "@youwol/flux-three",
+        "@youwol/flux-files": "@youwol/flux-files",
+        "@youwol/flux-dataframe": "@youwol/flux-dataframe",
+        "@youwol/dataframe": "@youwol/dataframe",
+        'three': {
+            commonjs:'three',
+            commonjs2:'three',
+            root:['THREE']
+        },
+        "three-trackballcontrols": {
+            commonjs:"three-trackballcontrols",
+            commonjs2:"three-trackballcontrols",
+            root:["TrackballControls"]
+        },
+        "@youwol/kepler": "@youwol/kepler",
+        "@youwol/io": "@youwol/io"
     }],
     module: {
         rules: [

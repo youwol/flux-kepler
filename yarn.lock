@@ -811,15 +811,35 @@
   resolved "https://registry.yarnpkg.com/@youwol/cdn-client/-/cdn-client-0.0.4.tgz#20844096b7e2e59c3a3e4a0afb08eb13a420042f"
   integrity sha512-sRjywyfmgwHVRk5CdUFgB0SYKUXEv2ywlEOedt8MeNzg7V8x1K2W4EBntve6ja0z2uRCfOu1dZQDpynBrDWEeA==
 
+"@youwol/dataframe@0.x":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@youwol/dataframe/-/dataframe-0.0.18.tgz#32de64e8fe71c50093fd8ddd1190a620be1a8cb0"
+  integrity sha512-z63zN0CaPVMp/mzDsBkGgSG9J/1iweypGEH2upblfDyORj1iZVwkG6Rmu2WuKxHBdhSqIxvm3FGuFruAC1VNvA==
+
 "@youwol/flux-core@0.x":
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/@youwol/flux-core/-/flux-core-0.0.10.tgz#8e51200296cf4a64289964e90b5f41376cfaf177"
   integrity sha512-OhokkcEYnxmce5YuE1SYhexE821bauyDHSnW0Vuf+fBoxyL3CpqIvjxdWBhhuxTNVufBM1zmoAKUtnJx4wuXyA==
 
+"@youwol/flux-files@0.x":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@youwol/flux-files/-/flux-files-0.0.4.tgz#50c2350fc417d7c03fe6ef4930d5b5f66fed533b"
+  integrity sha512-8hCx3qrBvJB2PMeas5a9OCnXr1vB79MUbkZNaBsgA9+/k1+2YPvDj8nNR8DrbAkAXjhNJf4dsuLosDFKy0G58w==
+
+"@youwol/flux-three@0.x":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@youwol/flux-three/-/flux-three-0.0.1.tgz#f3e4e57bdd163057f953f3d02f6a97c412bf7460"
+  integrity sha512-QD7ohnsx07+jHtquztWUu14gB6COA/y3IJeOTcBD4BjJmqqrqTztOHfu/qiapwT1x13jG2pmWXsN5x6iJbDIeQ==
+
 "@youwol/flux-view@0.x":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@youwol/flux-view/-/flux-view-0.0.8.tgz#db06d9a01dc568b75f95c400447c5b649c1419d6"
   integrity sha512-Q4mEPqqY3/eiaQhybppdyonVJG8dcUwH4ku0zSyYupQYdAsgASSmp9xfyhvfbcqUmKpHItToHvYg3PFk9vlPxA==
+
+"@youwol/io@0.x":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@youwol/io/-/io-0.0.10.tgz#99397c8c00ddf8b575f8138a83a967ae4d875e54"
+  integrity sha512-CIIp+tUvQK/7WrHNmEPDuT0aB+UrgMRyGxAYV7F36AmzXtByJAW2Y7PUf9MpCRf2KcQmALF19+DtG0tBxpLtNQ==
 
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.5"
@@ -4262,6 +4282,16 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+three-trackballcontrols@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/three-trackballcontrols/-/three-trackballcontrols-0.0.8.tgz#4af85312d211387e451023f9bef576094993a118"
+  integrity sha512-9my4rB/ILaJw8E6khOcC6d8F8kEe6BvRtCer9bFJGZOh9txy4BqzwPrG7d8YCKK9MfcyTUoLsB5LKIsbtsZRTg==
+
+three@0.114.0:
+  version "0.114.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.114.0.tgz#754d08467a950ddeef06a0c645a1302b130e455a"
+  integrity sha512-3av45FxJeqYm7Rl02dfGBoqTaf2a934oUB4zMNrN8xjmASoSGeeykYoAr35+UntTdJDY/STw6CY3KuXFBWETig==
 
 throat@^5.0.0:
   version "5.0.0"
