@@ -68,6 +68,23 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#keplermesh" id="keplermesh" style="color: inherit; text-decoration: none;">
+							<h2>KeplerMesh</h2>
+						</a>
+					</div>
+					<p>A Kepler mesh describes a 3D structure for which every vertex are associated
+						to a line of a provided
+					<a href="https://youwol.github.io/dataframe/dist/docs/pages/Info/description.html" class="external">Dataframe</a>.</p>
+					<p>See also:</p>
+					<ul>
+						<li> <a href="https://threejs.org/docs/#api/en/objects/Mesh" class="external">three.js Mesh</a>: the underlying
+						representation of the mesh</li>
+					</ul>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -94,6 +111,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#animations" class="tsd-kind-icon">animations</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#castshadow" class="tsd-kind-icon">cast<wbr>Shadow</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#children" class="tsd-kind-icon">children</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#customdepthmaterial" class="tsd-kind-icon">custom<wbr>Depth<wbr>Material</a></li>
@@ -110,7 +128,6 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#matrixautoupdate" class="tsd-kind-icon">matrix<wbr>Auto<wbr>Update</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#matrixworld" class="tsd-kind-icon">matrix<wbr>World</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#matrixworldneedsupdate" class="tsd-kind-icon">matrix<wbr>World<wbr>Needs<wbr>Update</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_models.keplermesh.html#mesh" class="tsd-kind-icon">mesh</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#modelviewmatrix" class="tsd-kind-icon">model<wbr>View<wbr>Matrix</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#morphtargetdictionary" class="tsd-kind-icon">morph<wbr>Target<wbr>Dictionary</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#morphtargetinfluences" class="tsd-kind-icon">morph<wbr>Target<wbr>Influences</a></li>
@@ -142,6 +159,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#applymatrix4" class="tsd-kind-icon">apply<wbr>Matrix4</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#applyquaternion" class="tsd-kind-icon">apply<wbr>Quaternion</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#attach" class="tsd-kind-icon">attach</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#clear" class="tsd-kind-icon">clear</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#clone" class="tsd-kind-icon">clone</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#copy" class="tsd-kind-icon">copy</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a></li>
@@ -191,20 +209,23 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Kepler<wbr>Mesh<span class="tsd-signature-symbol">(</span>mesh<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Mesh</span>, dataframe<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataFrame</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Kepler<wbr>Mesh<span class="tsd-signature-symbol">(</span>geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, dataframe<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataFrame</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Mesh.constructor</p>
 								<ul>
-									<li>Defined in src/lib/models.ts:9</li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L20">src/lib/models.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>mesh: <span class="tsd-signature-type">Mesh</span></h5>
+									<h5>geometry: <span class="tsd-signature-type">BufferGeometry</span></h5>
+								</li>
+								<li>
+									<h5>material: <span class="tsd-signature-type">Material</span></h5>
 								</li>
 								<li>
 									<h5>dataframe: <span class="tsd-signature-type">DataFrame</span></h5>
@@ -218,19 +239,45 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+					<a name="animations" class="tsd-anchor"></a>
+					<h3>animations</h3>
+					<div class="tsd-signature tsd-kind-icon">animations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AnimationClip</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from Mesh.animations</p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:159</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Array with animation clips.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>[]</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="castshadow" class="tsd-anchor"></a>
 					<h3>cast<wbr>Shadow</h3>
 					<div class="tsd-signature tsd-kind-icon">cast<wbr>Shadow<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.castShadow</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:112</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:132</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Gets rendered into shadow map.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -240,13 +287,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.children</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:52</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:51</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Array with object&#39;s children.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>[]</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -256,7 +308,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.customDepthMaterial</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:140</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:173</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -275,7 +327,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.customDistanceMaterial</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:145</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:178</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -298,23 +350,29 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.frustumCulled</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:122</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:145</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>When this is set, it checks every frame if the object is in the frustum of the camera. Otherwise the object gets drawn every frame even if it isn&#39;t visible.</p>
+							<p>When this is set, it checks every frame if the object is in the frustum of the camera before rendering the object.
+							If set to false the object gets rendered every frame even if it is not in the frustum of the camera.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>true</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="geometry" class="tsd-anchor"></a>
 					<h3>geometry</h3>
-					<div class="tsd-signature tsd-kind-icon">geometry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Geometry</span></div>
+					<div class="tsd-signature tsd-kind-icon">geometry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BufferGeometry</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.geometry</p>
 						<ul>
-							<li>Defined in node_modules/three/src/objects/Mesh.d.ts:15</li>
+							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:13</li>
 						</ul>
 					</aside>
 				</section>
@@ -325,7 +383,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.id</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:30</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:26</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -341,7 +399,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.isMesh</p>
 						<ul>
-							<li>Defined in node_modules/three/src/objects/Mesh.d.ts:19</li>
+							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:17</li>
 						</ul>
 					</aside>
 				</section>
@@ -352,7 +410,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.isObject3D</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:151</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:184</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -369,9 +427,16 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.layers</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:103</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:121</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Layers()</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="material" class="tsd-anchor"></a>
@@ -380,7 +445,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.material</p>
 						<ul>
-							<li>Defined in node_modules/three/src/objects/Mesh.d.ts:16</li>
+							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:14</li>
 						</ul>
 					</aside>
 				</section>
@@ -391,13 +456,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.matrix</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:86</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:97</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Local transform.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Matrix4()</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -407,13 +477,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.matrixAutoUpdate</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:96</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:110</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>When this is set, it calculates the matrix of position, (rotation or quaternion) and scale every frame and also recalculates the matrixWorld property.</p>
+							<p>When this is set, it calculates the matrix of position, (rotation or quaternion) and scale every frame and also
+							recalculates the matrixWorld property.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>THREE.Object3D.DefaultMatrixAutoUpdate</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -423,13 +499,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.matrixWorld</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:91</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:103</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The global transform of the object. If the Object3d has no parent, then it&#39;s identical to the local transform.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Matrix4()</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -439,21 +520,19 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.matrixWorldNeedsUpdate</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:101</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:116</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>When this is set, it calculates the matrixWorld in that frame and resets this property to false.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="mesh" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> mesh</h3>
-					<div class="tsd-signature tsd-kind-icon">mesh<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Mesh</span></div>
-					<aside class="tsd-sources">
-					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="modelviewmatrix" class="tsd-anchor"></a>
@@ -462,9 +541,16 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.modelViewMatrix</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:79</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:86</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Matrix4()</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="morphtargetdictionary" class="tsd-anchor"></a>
@@ -473,7 +559,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.morphTargetDictionary</p>
 						<ul>
-							<li>Defined in node_modules/three/src/objects/Mesh.d.ts:18</li>
+							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:16</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -492,7 +578,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.morphTargetInfluences</p>
 						<ul>
-							<li>Defined in node_modules/three/src/objects/Mesh.d.ts:17</li>
+							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:15</li>
 						</ul>
 					</aside>
 				</section>
@@ -503,13 +589,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.name</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:40</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:34</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Optional name of the object (doesn&#39;t need to be unique).</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>&#39;&#39;</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -519,18 +610,25 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.normalMatrix</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:81</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:91</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Matrix3()</p>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="onafterrender" class="tsd-anchor"></a>
 					<h3>on<wbr>After<wbr>Render</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>After<wbr>Render<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Geometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>After<wbr>Render<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.onAfterRender</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:168</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:201</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -543,7 +641,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Geometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -559,7 +657,7 @@
 												<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
 											</li>
 											<li>
-												<h5>geometry: <span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Geometry</span></h5>
+												<h5>geometry: <span class="tsd-signature-type">BufferGeometry</span></h5>
 											</li>
 											<li>
 												<h5>material: <span class="tsd-signature-type">Material</span></h5>
@@ -578,11 +676,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="onbeforerender" class="tsd-anchor"></a>
 					<h3>on<wbr>Before<wbr>Render</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Before<wbr>Render<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Geometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Before<wbr>Render<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.onBeforeRender</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:156</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:189</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -595,7 +693,7 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Geometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
@@ -611,7 +709,7 @@
 												<h5>camera: <span class="tsd-signature-type">Camera</span></h5>
 											</li>
 											<li>
-												<h5>geometry: <span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Geometry</span></h5>
+												<h5>geometry: <span class="tsd-signature-type">BufferGeometry</span></h5>
 											</li>
 											<li>
 												<h5>material: <span class="tsd-signature-type">Material</span></h5>
@@ -634,13 +732,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.parent</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:47</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:45</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Object&#39;s parent in the scene graph.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -650,13 +753,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.position</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:62</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:63</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Object&#39;s local position.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Vector3()</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -666,13 +774,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.quaternion</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:72</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:75</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Global rotation.</p>
+							<p>Object&#39;s local rotation as a Quaternion.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Quaternion()</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -682,13 +795,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.receiveShadow</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:117</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:138</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Material gets baked in shadow receiving.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>false</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -698,13 +816,20 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.renderOrder</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:127</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:153</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Overrides the default rendering order of scene graph objects, from lowest to highest renderOrder. Opaque and transparent objects remain sorted independently though. When this property is set for an instance of Group, all descendants objects will be sorted and rendered together.</p>
+							<p>Overrides the default rendering order of scene graph objects, from lowest to highest renderOrder.
+								Opaque and transparent objects remain sorted independently though.
+							When this property is set for an instance of Group, all descendants objects will be sorted and rendered together.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>0</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -714,13 +839,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.rotation</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:67</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:69</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Object&#39;s local rotation (Euler angles), in radians.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Euler()</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -730,13 +860,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.scale</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:77</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:81</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Object&#39;s local scale.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>new THREE.Vector3()</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -746,7 +881,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.type</p>
 						<ul>
-							<li>Defined in node_modules/three/src/objects/Mesh.d.ts:20</li>
+							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:18</li>
 						</ul>
 					</aside>
 				</section>
@@ -757,13 +892,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.up</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:57</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:57</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Up direction.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>THREE.Object3D.DefaultUp.clone()</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -773,13 +913,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.userData</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:132</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:165</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>An object that can be used to store custom data about the Object3d. It should not hold references to functions as these will not be cloned.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>{}</p>
+							</dd>
+						</dl>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -797,7 +942,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.uuid</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:35</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:28</li>
 						</ul>
 					</aside>
 				</section>
@@ -808,13 +953,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.visible</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:107</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:126</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Object gets rendered if true.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>true</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
@@ -824,7 +974,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.DefaultMatrixAutoUpdate</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:178</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:211</li>
 						</ul>
 					</aside>
 				</section>
@@ -835,7 +985,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from Mesh.DefaultUp</p>
 						<ul>
-							<li>Defined in node_modules/three/src/core/Object3D.d.ts:177</li>
+							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:210</li>
 						</ul>
 					</aside>
 				</section>
@@ -853,7 +1003,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.add</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:284</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:305</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -882,7 +1032,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.addEventListener</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/EventDispatcher.d.ts:27</li>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:26</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -938,7 +1088,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.applyMatrix4</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:183</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:216</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -967,7 +1117,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.applyQuaternion</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:185</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:218</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -991,7 +1141,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.attach</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:294</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:320</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1010,6 +1160,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+					<a name="clear" class="tsd-anchor"></a>
+					<h3>clear</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from Mesh.clear</p>
+								<ul>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:315</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all child objects.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="clone" class="tsd-anchor"></a>
 					<h3>clone</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -1020,7 +1193,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.clone</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:342</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:363</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1044,7 +1217,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.copy</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:349</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:370</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1073,7 +1246,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.dispatchEvent</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/EventDispatcher.d.ts:47</li>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:46</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1110,7 +1283,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.getObjectById</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:300</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:326</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1142,7 +1315,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.getObjectByName</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:306</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:332</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1174,7 +1347,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.getObjectByProperty</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:308</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:334</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1201,7 +1374,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.getWorldDirection</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:313</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:339</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1225,7 +1398,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.getWorldPosition</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:310</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:336</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1249,7 +1422,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.getWorldQuaternion</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:311</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:337</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1273,7 +1446,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.getWorldScale</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:312</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:338</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1297,7 +1470,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.hasEventListener</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/EventDispatcher.d.ts:34</li>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:33</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1353,7 +1526,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.localToWorld</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:267</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:288</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1385,7 +1558,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.lookAt</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:279</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:300</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1423,7 +1596,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.raycast</p>
 								<ul>
-									<li>Defined in node_modules/three/src/objects/Mesh.d.ts:23</li>
+									<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:21</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1450,7 +1623,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.remove</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:289</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:310</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1479,7 +1652,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.removeEventListener</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/EventDispatcher.d.ts:41</li>
+									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:40</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1535,7 +1708,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.rotateOnAxis</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:212</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:233</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1573,7 +1746,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.rotateOnWorldAxis</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:219</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:240</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1611,7 +1784,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.rotateX</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:225</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:246</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1637,7 +1810,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.rotateY</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:231</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:252</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1663,7 +1836,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.rotateZ</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:237</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:258</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1689,7 +1862,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.setRotationFromAxisAngle</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:190</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:220</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1716,7 +1889,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.setRotationFromEuler</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:195</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:222</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1740,7 +1913,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.setRotationFromMatrix</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:200</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:224</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1764,7 +1937,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.setRotationFromQuaternion</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:205</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:226</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1788,7 +1961,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.toJSON</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:335</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:361</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1826,7 +1999,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.translateOnAxis</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:243</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:264</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1859,7 +2032,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.translateX</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:249</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:270</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1891,7 +2064,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.translateY</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:255</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:276</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1923,7 +2096,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.translateZ</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:261</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:282</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1955,7 +2128,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.traverse</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:317</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:343</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1997,7 +2170,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.traverseAncestors</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:321</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:347</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2039,7 +2212,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.traverseVisible</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:319</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:345</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2081,7 +2254,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.updateMatrix</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:326</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:352</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2104,7 +2277,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.updateMatrixWorld</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:331</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:357</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2133,7 +2306,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.updateMorphTargets</p>
 								<ul>
-									<li>Defined in node_modules/three/src/objects/Mesh.d.ts:22</li>
+									<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:20</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2151,7 +2324,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.updateWorldMatrix</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:333</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:359</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2178,7 +2351,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from Mesh.worldToLocal</p>
 								<ul>
-									<li>Defined in node_modules/three/src/core/Object3D.d.ts:273</li>
+									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:294</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2223,9 +2396,6 @@
 						<a href="../modules/lib_loader_module.html">lib/loader.module</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/lib_lut_utils.html">lib/lut-<wbr>utils</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="../modules/lib_main.html">lib/main</a>
 					</li>
 					<li class="current tsd-kind-module">
@@ -2242,6 +2412,9 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="lib_models.keplermesh.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+								<a href="lib_models.keplermesh.html#animations" class="tsd-kind-icon">animations</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="lib_models.keplermesh.html#castshadow" class="tsd-kind-icon">cast<wbr>Shadow</a>
@@ -2290,9 +2463,6 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="lib_models.keplermesh.html#matrixworldneedsupdate" class="tsd-kind-icon">matrix<wbr>World<wbr>Needs<wbr>Update</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="lib_models.keplermesh.html#mesh" class="tsd-kind-icon">mesh</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="lib_models.keplermesh.html#modelviewmatrix" class="tsd-kind-icon">model<wbr>View<wbr>Matrix</a>
@@ -2371,6 +2541,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="lib_models.keplermesh.html#attach" class="tsd-kind-icon">attach</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+								<a href="lib_models.keplermesh.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="lib_models.keplermesh.html#clone" class="tsd-kind-icon">clone</a>

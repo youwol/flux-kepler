@@ -128,7 +128,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides FluxThree.Schemas.Object3DConfiguration.constructor</p>
 								<ul>
-									<li>Defined in src/lib/models.ts:52</li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L76">src/lib/models.ts:76</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -192,9 +192,19 @@
 					<div class="tsd-signature tsd-kind-icon">observable<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/lib/models.ts:44</li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L68">src/lib/models.ts:68</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The observableFunction is a function that map a line of
+							a [[KeplerMesh.Dataframe]] to the quantity of interest to observe.</p>
+						</div>
+						<p>Each line of the dataframe correspond to some properties available
+							for a particular vertex. The dimension of the quantity to observe
+							depends on the skin used: for most of them it is a scalar (e.g. for <a href="../modules/lib_iso_contours_module.moduleisocontours.html">ModuleIsoContours</a>),
+						but there can be cases (e.g. streamlines) where a 3D vector is expected.</p>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="transform" class="tsd-anchor"></a>
@@ -218,7 +228,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/lib/models.ts:35</li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L49">src/lib/models.ts:49</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -235,7 +245,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in src/lib/models.ts:46</li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L70">src/lib/models.ts:70</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -285,9 +295,6 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/lib_loader_module.html">lib/loader.module</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_lut_utils.html">lib/lut-<wbr>utils</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/lib_main.html">lib/main</a>

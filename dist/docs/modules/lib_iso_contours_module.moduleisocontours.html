@@ -75,13 +75,25 @@
 							<h2>Presentation</h2>
 						</a>
 					</div>
-					<p>Create iso-contours skin from Kepler object(s)</p>
-					<a href="#resources" id="resources" style="color: inherit; text-decoration: none;">
-						<h2>Resources</h2>
+					<p>Create an iso-contours skin from <a href="../classes/lib_models.keplermesh.html">Kepler</a> object(s).</p>
+					<div style="max-width:100%; overflow:auto">
+						<div style="display:flex; width:250%; margin:auto">
+							<figure style="text-align: center; font-style: italic;">
+								<img src="https://raw.githubusercontent.com/youwol/flux-kepler/master/images/screenshots/iso-contours.png"
+								alt="" >
+								<figcaption >An example of iso-contours skin
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+					<p>Various parameters can be provided through the configuration to customize the skin,
+					see <a href="../classes/lib_iso_contours_module.moduleisocontours.persistentdata.html">ModuleIsoContours.PersistentData</a>.</p>
+					<a href="#technical-details" id="technical-details" style="color: inherit; text-decoration: none;">
+						<h2>Technical details</h2>
 					</a>
 					<p>Various resources:</p>
 					<ul>
-						<li>   <a href="https://github.com/youwol/kepler">kepler</a>: the kepler library</li>
+						<li>   <a href="https://github.com/youwol/kepler">kepler</a>: the kepler library, used to generate the iso-contour skin</li>
 						<li>   <a href="https://github.com/youwol/io">io</a>: library used to parse data files</li>
 					</ul>
 				</div>
@@ -103,12 +115,6 @@
 								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="lib_iso_contours_module.moduleisocontours.html#contract" class="tsd-kind-icon">contract</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
-							<h3>Functions</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="lib_iso_contours_module.moduleisocontours.html#createisocontourfilled" class="tsd-kind-icon">create<wbr>Iso<wbr>Contour<wbr>Filled</a></li>
-							</ul>
-						</section>
 					</div>
 				</section>
 			</section>
@@ -120,49 +126,9 @@
 					<div class="tsd-signature tsd-kind-icon">contract<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AnyOf</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in src/lib/iso-contours.module.ts:111</li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/iso-contours.module.ts#L123">src/lib/iso-contours.module.ts:123</a></li>
 						</ul>
 					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
-					<a name="createisocontourfilled" class="tsd-anchor"></a>
-					<h3>create<wbr>Iso<wbr>Contour<wbr>Filled</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Iso<wbr>Contour<wbr>Filled<span class="tsd-signature-symbol">(</span>surface<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Mesh</span>, attribute<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span>, __namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>material<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol">; </span>parameters<span class="tsd-signature-symbol">?: </span><a href="../classes/lib_iso_contours_module.moduleisocontours.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Mesh</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in src/lib/iso-contours.module.ts:213</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>surface: <span class="tsd-signature-type">Mesh</span></h5>
-								</li>
-								<li>
-									<h5>attribute: <span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-								<li>
-									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>material<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol">; </span>parameters<span class="tsd-signature-symbol">?: </span><a href="../classes/lib_iso_contours_module.moduleisocontours.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> material<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Material</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> parameters<span class="tsd-signature-symbol">?: </span><a href="../classes/lib_iso_contours_module.moduleisocontours.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a></h5>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Mesh</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -184,9 +150,6 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
 						<a href="lib_iso_contours_module.moduleisocontours.html#contract" class="tsd-kind-icon">contract</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-namespace">
-						<a href="lib_iso_contours_module.moduleisocontours.html#createisocontourfilled" class="tsd-kind-icon">create<wbr>Iso<wbr>Contour<wbr>Filled</a>
 					</li>
 				</ul>
 			</nav>
