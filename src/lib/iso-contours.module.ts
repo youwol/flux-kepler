@@ -10,12 +10,27 @@ import {createIsoContours, IsoContoursParameters} from '@youwol/kepler'
 /**
   ## Presentation
 
-    Create iso-contours skin from Kepler object(s)
+    Create an iso-contours skin from [[KeplerMesh | Kepler]] object(s).
 
- ## Resources
+<div style="max-width:100%; overflow:auto">
+    <div style="display:flex; width:250%; margin:auto">
+        <figure style="text-align: center; font-style: italic;">
+            <img src="https://raw.githubusercontent.com/youwol/flux-kepler/master/images/screenshots/iso-contours.png" 
+             alt="" >
+            <figcaption >An example of iso-contours skin
+            </figcaption>
+        </figure>
+    </div>
+</div>
 
+    Various parameters can be provided through the configuration to customize the skin,
+    see [[ModuleIsoContours.PersistentData]].
+
+ ## Technical details
+
+ 
  Various resources:
- -    [kepler](https://github.com/youwol/kepler): the kepler library
+ -    [kepler](https://github.com/youwol/kepler): the kepler library, used to generate the iso-contour skin
  -    [io](https://github.com/youwol/io): library used to parse data files
  */
 export namespace ModuleIsoContours{
@@ -43,7 +58,12 @@ export namespace ModuleIsoContours{
     /**
      * ## Persistent Data  🔧
      *
-     *
+     * The properties of this class are the parameters that can be 
+     * configured statically and persisted through the editor panel of the   
+     * module.
+     * 
+     * > 🕵️‍♀️ Most of the attributes are quite straightforward to understand, the 
+     * > attribute [[observableFunction]] is important to understand.
      */
     @Schema({
         pack
@@ -54,7 +74,7 @@ export namespace ModuleIsoContours{
          * Whether or not to fill between iso contours. Default to true.
          */
         @Property({
-            description: "Whether or not to fill between iso contours. Default to true.",
+            description: "Whether or not to fill in-between iso contours. Default to true.",
         })
         public readonly filled     : boolean = true
 
@@ -136,7 +156,7 @@ export namespace ModuleIsoContours{
         displayName: "IsoContours",
         description: "Create iso-contours skin from Kepler object(s)",
         resources: {
-            'technical doc': `${pack.urlCDN}/dist/docs/modules/lib_module_loader_module.moduleloader.html`
+            'technical doc': `${pack.urlCDN}/dist/docs/modules/lib_iso_contours_module.moduleisocontours.html`
         }
     })
     @BuilderView({
@@ -209,5 +229,4 @@ export namespace ModuleIsoContours{
             context.terminate()
         }
     }
-
 }
