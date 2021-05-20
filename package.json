@@ -18,7 +18,9 @@
         "test-coverage": "jest -c ./jest.config.js --rootDir . -i --collect-coverage --collectCoverageFrom=./src/lib/**/*.ts ",
         "publish-npm-public": "yarn build:prod && yarn test-coverage && yarn publish --access public"
     },
-    "dependencies": {},
+    "dependencies": {
+        "@types/three": "^0.128.0"
+    },
     "peerDependencies": {
         "@youwol/cdn-client": "0.x",
         "@youwol/flux-core": "0.x",
@@ -26,9 +28,14 @@
         "@youwol/flux-files": "0.x",
         "@youwol/flux-dataframe": "0.x",
         "@youwol/flux-three": "0.x",
+        "@youwol/fv-button": "0.x",
+        "@youwol/fv-group": "0.x",
+        "@youwol/fv-tree": "0.x",
+        "@youwol/fv-tabs": "0.x",
+        "@youwol/kepler": "0.x",
         "@youwol/dataframe": "0.x",
         "@youwol/io": "0.x",
-        "three": "0.114.0",
+        "three": "0.128.0",
         "three-trackballcontrols":"0.0.8",
         "lodash": "4.x",
         "reflect-metadata": "0.x",
@@ -41,9 +48,10 @@
         "@youwol/flux-three": "0.x",
         "@youwol/flux-files": "0.x",
         "@youwol/flux-dataframe": "0.x",
+        "@youwol/kepler": "0.x",
         "@youwol/dataframe": "0.x",
         "@youwol/io": "0.x",
-        "three": "0.114.0",
+        "three": "0.128.0",
         "three-trackballcontrols":"0.0.8",
         "reflect-metadata": "0.1.13",
         "@types/jest": "26.0.22",
@@ -72,6 +80,7 @@
             "@youwol/flux-core": "0.x",
             "@youwol/flux-three": "0.x",
             "@youwol/flux-files": "0.x",
+            "@youwol/kepler": "0.x",
             "@youwol/io": "0.x",
             "@youwol/flux-dataframe": "0.x"
         }
