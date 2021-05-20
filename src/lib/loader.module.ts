@@ -147,10 +147,8 @@ export namespace ModuleLoader{
                             positions: df.get('positions').array as any,
                             indices  : df.get('indices').array as any
                         })
-                        context.info("Geometry created", geometry)
-                        let mesh = new Mesh(geometry, defaultMaterial())
-                        
-                        return new KeplerMesh( mesh, df)
+                        context.info("Geometry created", geometry)                        
+                        return new KeplerMesh( geometry, defaultMaterial(), df)
                     })
             })
             let group = new Group() 

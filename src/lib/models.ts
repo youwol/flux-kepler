@@ -8,8 +8,11 @@ import * as FluxThree from '@youwol/flux-three'
 
 export class KeplerMesh extends Mesh{
 
-    constructor( public readonly mesh:Mesh, public readonly dataframe: DataFrame ){
-        super(mesh.geometry, mesh.material)
+    constructor(
+        geometry: BufferGeometry,
+        material: Material,
+        public readonly dataframe: DataFrame) {
+        super(geometry, material)
     }
 }
 
