@@ -7,6 +7,8 @@ import { createFluxThreeObject3D } from '@youwol/flux-three'
 import { DoubleSide, Group, MeshStandardMaterial, Object3D } from 'three'
 import { KeplerMesh, LookUpTables, SkinConfiguration } from './models'
 import {createIsoContours, IsoContoursParameters} from '@youwol/kepler'
+
+
 /**
   ## Presentation
 
@@ -26,6 +28,17 @@ import {createIsoContours, IsoContoursParameters} from '@youwol/kepler'
     Various parameters can be provided through the configuration to customize the skin,
     see [[ModuleIsoContours.PersistentData]].
 
+ ## Usage in Flux
+ 
+  This module is usually plugged after a module emitting a [[KeplerMesh]] in one of 
+  his output. It can be for instance [[ModuleLoader]]. 
+
+  Various display options are exposed through the module's configuration, see [[ModuleIsoContours.PersistentData]].
+  Some properties are common to every skins, see [[SkinConfiguration]].
+
+  The actual attribute - a scalar - displays by the skin is controlled by 
+  [[SkinConfiguration.observableFunction]]
+ 
  ## Technical details
 
  
@@ -63,7 +76,7 @@ export namespace ModuleIsoContours{
      * module.
      * 
      * > 🕵️‍♀️ Most of the attributes are quite straightforward to understand, the 
-     * > attribute [[observableFunction]] is important to understand.
+     * > attribute [[SkinConfiguration.observableFunction]] is important to understand. 
      */
     @Schema({
         pack

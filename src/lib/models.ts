@@ -9,21 +9,31 @@ import * as FluxThree from '@youwol/flux-three'
  * ## KeplerMesh
  * 
  * A Kepler mesh describes a 3D structure for which every vertex are associated
- * to a line of a provided
- *  [[https://youwol.github.io/dataframe/dist/docs/pages/Info/description.html | Dataframe]].
+ * to a line of a provided [[dataframe]].
  * 
- * See also:
- * -  [[https://threejs.org/docs/#api/en/objects/Mesh | three.js Mesh]]: the underlying 
- * representation of the mesh
+ * There are various ways to create a Kepler Mesh, the [[ModuleLoader]] is one example. 
+ *
+ * ## Technical details
+ * 
+ * KeplerMesh inherits from  [[https://threejs.org/docs/#api/en/objects/Mesh | three.js Mesh]].
+ * The dataframe is supported by this 
+ *  [[https://youwol.github.io/dataframe/dist/docs/pages/Info/description.html | library]].
  * 
  */
 export class KeplerMesh extends Mesh {
 
+    /**
+     * The dataframe associated to the 3D structure. 
+     * Rows' count and order match those of the vertex.
+     */
+    public readonly dataframe : DataFrame
+
     constructor(
         geometry: BufferGeometry,
         material: Material,
-        public readonly dataframe: DataFrame) {
+        dataframe: DataFrame) {
         super(geometry, material)
+        this.dataframe = dataframe
     }
 }
 
@@ -41,6 +51,13 @@ export let LookUpTables = [
     'Banded'
 ]
 
+/**
+ * ## SkinConfiguration
+ * 
+ * The properties of this class are shared by every skin modules 
+ * of this library.
+ * 
+ */
 @Schema({
     pack
 })
@@ -49,17 +66,32 @@ export class SkinConfiguration extends FluxThree.Schemas.Object3DConfiguration {
     static defaultCode = `
 /*
 */
-return (df, algorithms) => df.get('A')
+return (df, helpers) => df.series.A
 `
 
     /**
      * The observableFunction is a function that map a line of 
-     * a [[KeplerMesh.Dataframe]] to the quantity of interest to observe.
+     * a [[KeplerMesh.dataframe]] to the quantity of interest to observe.
      * 
      * Each line of the dataframe correspond to some properties available 
      * for a particular vertex. The dimension of the quantity to observe 
      * depends on the skin used: for most of them it is a scalar (e.g. for [[ModuleIsoContours]]),
-     * but there can be cases (e.g. streamlines) where a 3D vector is expected.
+     * but there can be cases (e.g. streamlines with 3D vector expected) where
+     * another dimension is expected.
+     * 
+     * An example of observable function for a [[KeplerMesh]] associated to 
+     * a dataframe including a column 'data' would be :
+     * ```js
+     * return (dataframe, helpers) => {
+     *      // This implementation provides the column 'data' as observable 
+     *      // quantity to the skin
+     *      return dataframe.series.data
+     * }
+     * ```
+     * 
+     * The dataframe argument is the dataframe of the Kepler object,
+     * helpers contains a collection of algorithms to transform dataframe's
+     * series.
      */
     @Property({
         description: "DataFrame to target attribute mapping function",
