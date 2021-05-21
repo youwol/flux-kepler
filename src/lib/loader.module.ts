@@ -150,8 +150,9 @@ export namespace ModuleLoader{
                     `create surface ${i}`,
                     (ctx) => {
                         let geometry =  createBufferGeometry({
-                            positions: df.get('positions').array as any,
-                            indices  : df.get('indices').array as any
+                            positions: df.series.positions.array as any,
+                            indices  : df.series.indices.array as any
+                        })
                         })
                         context.info("Geometry created", geometry)                        
                         return new KeplerMesh( geometry, defaultMaterial(), df)
