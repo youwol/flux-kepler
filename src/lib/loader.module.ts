@@ -46,7 +46,13 @@ export namespace ModuleLoader{
     export class PersistentData extends FluxThree.Schemas.SimpleObject3DConfiguration{
        
         constructor(forwardParams) {
-            super(forwardParams)
+            super({
+                ...forwardParams,
+                ...{ 
+                    objectId: forwardParams['objectId'] ?  forwardParams['objectId']: 'Loaded',
+                    objectName: forwardParams['objectName'] ?  forwardParams['objectName']: 'Loaded'
+                }
+            })
         }
     }
 
