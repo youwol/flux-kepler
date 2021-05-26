@@ -2,11 +2,11 @@ import { Context, BuilderView, Flux, Schema, ModuleFlux, Pipe, expect, expectIns
 } from '@youwol/flux-core'
 
 import{pack} from './main'
-import { Serie } from '@youwol/dataframe'
+import { array, Serie } from '@youwol/dataframe'
 import { createFluxThreeObject3D } from '@youwol/flux-three'
 import { DoubleSide, Group, MeshStandardMaterial, Object3D } from 'three'
 import { KeplerMesh, LookUpTables, SkinConfiguration } from './models'
-import {createIsoContours, IsoContoursParameters} from '@youwol/kepler'
+import {createIsoContours, generateIsos, IsoContoursParameters} from '@youwol/kepler'
 
 
 /**
@@ -47,6 +47,16 @@ import {createIsoContours, IsoContoursParameters} from '@youwol/kepler'
  -    [io](https://github.com/youwol/io): library used to parse data files
  */
 export namespace ModuleIsoContours{
+
+    export function getIsoValues(serie: Serie, limitNormalized1: number, limitNormalized2: number, count: number){
+
+        let minNormalized = Math.min(limitNormalized1, limitNormalized2)
+        let maxNormalized = Math.max(limitNormalized1, limitNormalized2)
+        const minmax = array.minMax(serie.array)
+        let min = minmax[0] + (minmax[1] - minmax[0]) * minNormalized
+        let max = minmax[0] + (minmax[1] - minmax[0]) * maxNormalized
+        return { min, max, values: generateIsos(min, max, count) }
+    }
 
 //Icons made by <a href="https://www.flaticon.com/authors/wissawa-khamsriwath" title="Wissawa Khamsriwath">Wissawa Khamsriwath</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     let svgIcon = `
@@ -212,12 +222,12 @@ export namespace ModuleIsoContours{
                             throw new Error("The itemSize of the observable serie should be one (i.e. a scalar).")
                         }                        
                         ctx.info("Observation serie", obsSerie)
-                        //let skin = createIsoContourFilled( mesh, obsSerie, {parameters:configuration} )
+                        let {min, max, values} = getIsoValues(obsSerie,configuration.min, configuration.max, configuration.count)
                         let parameters = new IsoContoursParameters({
                             filled:configuration.filled,
-                            nbr:configuration.count,
-                            min: configuration.min,
-                            max: configuration.max,
+                            isoList: values,
+                            min: min,
+                            max: max,
                             lut: configuration.lut
                         })
                         let material =  new MeshStandardMaterial({ color: 0xffffff, vertexColors: true, side:DoubleSide })

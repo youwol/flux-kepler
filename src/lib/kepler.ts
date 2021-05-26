@@ -1,5 +1,5 @@
 import { Serie, IArray } from "@youwol/dataframe"
-import { BufferAttribute, BufferGeometry, TypedArray } from "three"
+import { BufferAttribute, BufferGeometry } from "three"
 
 
 
@@ -7,8 +7,8 @@ export function createBufferGeometry(
     {   positions, 
         indices 
     }: {
-            positions: TypedArray, 
-            indices: TypedArray 
+            positions: any, 
+            indices: any 
         }
 ): BufferGeometry
 {
