@@ -76,13 +76,14 @@
 						</a>
 					</div>
 					<p>A Kepler mesh describes a 3D structure for which every vertex are associated
-						to a line of a provided
-					<a href="https://youwol.github.io/dataframe/dist/docs/pages/Info/description.html" class="external">Dataframe</a>.</p>
-					<p>See also:</p>
-					<ul>
-						<li> <a href="https://threejs.org/docs/#api/en/objects/Mesh" class="external">three.js Mesh</a>: the underlying
-						representation of the mesh</li>
-					</ul>
+					to a line of a provided <a href="lib_models.keplermesh.html#dataframe">dataframe</a>.</p>
+					<p>There are various ways to create a Kepler Mesh, the <a href="../modules/lib_loader_module.moduleloader.html">ModuleLoader</a> is one example.</p>
+					<a href="#technical-details" id="technical-details" style="color: inherit; text-decoration: none;">
+						<h2>Technical details</h2>
+					</a>
+					<p>KeplerMesh inherits from  <a href="https://threejs.org/docs/#api/en/objects/Mesh" class="external">three.js Mesh</a>.
+						The dataframe is supported by this
+					<a href="https://youwol.github.io/dataframe/dist/docs/pages/Info/description.html" class="external">library</a>.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -216,7 +217,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Mesh.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L20">src/lib/models.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/b31fd33/src/lib/models.ts#L29">src/lib/models.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -341,7 +342,16 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> dataframe</h3>
 					<div class="tsd-signature tsd-kind-icon">dataframe<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DataFrame</span></div>
 					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/b31fd33/src/lib/models.ts#L29">src/lib/models.ts:29</a></li>
+						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The dataframe associated to the 3D structure.
+							Rows&#39; count and order match those of the vertex.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="frustumculled" class="tsd-anchor"></a>
@@ -2384,13 +2394,13 @@
 						<a href="../modules/auto_generated.html">auto_<wbr>generated</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/lib_colormap.html">lib/color<wbr>Map</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="../modules/lib_iso_contours_module.html">lib/iso-<wbr>contours.module</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/lib_kepler.html">lib/kepler</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/lib_live_skin_controller_plugin.html">lib/live-<wbr>skin-<wbr>controller.plugin</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/lib_loader_module.html">lib/loader.module</a>
@@ -2400,6 +2410,9 @@
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/lib_models.html">lib/models</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/lib_views_viewer_widgets_view.html">lib/views/viewer-<wbr>widgets.view</a>
 					</li>
 				</ul>
 			</nav>

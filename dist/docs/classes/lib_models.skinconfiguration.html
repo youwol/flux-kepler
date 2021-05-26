@@ -68,6 +68,17 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#skinconfiguration" id="skinconfiguration" style="color: inherit; text-decoration: none;">
+							<h2>SkinConfiguration</h2>
+						</a>
+					</div>
+					<p>The properties of this class are shared by every skin modules
+					of this library.</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -128,7 +139,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides FluxThree.Schemas.Object3DConfiguration.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L76">src/lib/models.ts:76</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/b31fd33/src/lib/models.ts#L108">src/lib/models.ts:108</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -192,18 +203,30 @@
 					<div class="tsd-signature tsd-kind-icon">observable<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L68">src/lib/models.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/b31fd33/src/lib/models.ts#L100">src/lib/models.ts:100</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>The observableFunction is a function that map a line of
-							a [[KeplerMesh.Dataframe]] to the quantity of interest to observe.</p>
+							a <a href="lib_models.keplermesh.html#dataframe">KeplerMesh.dataframe</a> to the quantity of interest to observe.</p>
 						</div>
 						<p>Each line of the dataframe correspond to some properties available
 							for a particular vertex. The dimension of the quantity to observe
 							depends on the skin used: for most of them it is a scalar (e.g. for <a href="../modules/lib_iso_contours_module.moduleisocontours.html">ModuleIsoContours</a>),
-						but there can be cases (e.g. streamlines) where a 3D vector is expected.</p>
+							but there can be cases (e.g. streamlines with 3D vector expected) where
+						another dimension is expected.</p>
+						<p>An example of observable function for a <a href="lib_models.keplermesh.html">KeplerMesh</a> associated to
+						a dataframe including a column &#39;data&#39; would be :</p>
+						<pre><code class="language-js"><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span><span style="color: #001080">dataframe</span><span style="color: #000000">, </span><span style="color: #001080">helpers</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">     </span><span style="color: #008000">// This implementation provides the column &#039;data&#039; as observable </span>
+<span style="color: #000000">     </span><span style="color: #008000">// quantity to the skin</span>
+<span style="color: #000000">     </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">dataframe</span><span style="color: #000000">.</span><span style="color: #001080">series</span><span style="color: #000000">.</span><span style="color: #001080">data</span>
+<span style="color: #000000">}</span>
+</code></pre>
+						<p>The dataframe argument is the dataframe of the Kepler object,
+							helpers contains a collection of algorithms to transform dataframe&#39;s
+						series.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
@@ -228,7 +251,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L49">src/lib/models.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/b31fd33/src/lib/models.ts#L66">src/lib/models.ts:66</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -245,7 +268,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/models.ts#L70">src/lib/models.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/b31fd33/src/lib/models.ts#L102">src/lib/models.ts:102</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -285,13 +308,13 @@
 						<a href="../modules/auto_generated.html">auto_<wbr>generated</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/lib_colormap.html">lib/color<wbr>Map</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="../modules/lib_iso_contours_module.html">lib/iso-<wbr>contours.module</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/lib_kepler.html">lib/kepler</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/lib_live_skin_controller_plugin.html">lib/live-<wbr>skin-<wbr>controller.plugin</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/lib_loader_module.html">lib/loader.module</a>
@@ -301,6 +324,9 @@
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/lib_models.html">lib/models</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/lib_views_viewer_widgets_view.html">lib/views/viewer-<wbr>widgets.view</a>
 					</li>
 				</ul>
 			</nav>

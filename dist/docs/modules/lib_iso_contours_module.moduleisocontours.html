@@ -88,6 +88,15 @@
 					</div>
 					<p>Various parameters can be provided through the configuration to customize the skin,
 					see <a href="../classes/lib_iso_contours_module.moduleisocontours.persistentdata.html">ModuleIsoContours.PersistentData</a>.</p>
+					<a href="#usage-in-flux" id="usage-in-flux" style="color: inherit; text-decoration: none;">
+						<h2>Usage in Flux</h2>
+					</a>
+					<p>This module is usually plugged after a module emitting a <a href="../classes/lib_models.keplermesh.html">KeplerMesh</a> in one of
+					his output. It can be for instance <a href="lib_loader_module.moduleloader.html">ModuleLoader</a>.</p>
+					<p>Various display options are exposed through the module&#39;s configuration, see <a href="../classes/lib_iso_contours_module.moduleisocontours.persistentdata.html">ModuleIsoContours.PersistentData</a>.
+					Some properties are common to every skins, see <a href="../classes/lib_models.skinconfiguration.html">SkinConfiguration</a>.</p>
+					<p>The actual attribute - a scalar - displays by the skin is controlled by
+					<a href="../classes/lib_models.skinconfiguration.html#observablefunction">SkinConfiguration.observableFunction</a></p>
 					<a href="#technical-details" id="technical-details" style="color: inherit; text-decoration: none;">
 						<h2>Technical details</h2>
 					</a>
@@ -115,6 +124,12 @@
 								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="lib_iso_contours_module.moduleisocontours.html#contract" class="tsd-kind-icon">contract</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="lib_iso_contours_module.moduleisocontours.html#getisovalues" class="tsd-kind-icon">get<wbr>Iso<wbr>Values</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -123,12 +138,58 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
 					<a name="contract" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagLet">Let</span> contract</h3>
-					<div class="tsd-signature tsd-kind-icon">contract<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AnyOf</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<div class="tsd-signature tsd-kind-icon">contract<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AnyOf</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/58d2282/src/lib/iso-contours.module.ts#L123">src/lib/iso-contours.module.ts:123</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/b31fd33/src/lib/iso-contours.module.ts#L146">src/lib/iso-contours.module.ts:146</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getisovalues" class="tsd-anchor"></a>
+					<h3>get<wbr>Iso<wbr>Values</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Iso<wbr>Values<span class="tsd-signature-symbol">(</span>serie<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Serie</span>, limitNormalized1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, limitNormalized2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/b31fd33/src/lib/iso-contours.module.ts#L51">src/lib/iso-contours.module.ts:51</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>serie: <span class="tsd-signature-type">Serie</span></h5>
+								</li>
+								<li>
+									<h5>limitNormalized1: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>limitNormalized2: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>count: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>values<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -150,6 +211,9 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
 						<a href="lib_iso_contours_module.moduleisocontours.html#contract" class="tsd-kind-icon">contract</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="lib_iso_contours_module.moduleisocontours.html#getisovalues" class="tsd-kind-icon">get<wbr>Iso<wbr>Values</a>
 					</li>
 				</ul>
 			</nav>
