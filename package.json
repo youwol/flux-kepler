@@ -25,13 +25,12 @@
         "@youwol/cdn-client": "0.x",
         "@youwol/flux-core": "0.x",
         "@youwol/flux-view": "0.x",
+        "@youwol/fv-button": "0.x",
+        "@youwol/fv-group": "0.x",
+        "@youwol/fv-input": "0.x",
         "@youwol/flux-files": "0.x",
         "@youwol/flux-dataframe": "0.x",
         "@youwol/flux-three": "0.x",
-        "@youwol/fv-button": "0.x",
-        "@youwol/fv-group": "0.x",
-        "@youwol/fv-tree": "0.x",
-        "@youwol/fv-tabs": "0.x",
         "@youwol/kepler": "0.x",
         "@youwol/dataframe": "0.x",
         "@youwol/io": "0.x",
@@ -44,6 +43,9 @@
     "devDependencies": {
         "@youwol/cdn-client": "0.x",
         "@youwol/flux-view": "0.x",
+        "@youwol/fv-button": "0.x",
+        "@youwol/fv-group": "0.x",
+        "@youwol/fv-input": "0.x",
         "@youwol/flux-core": "0.x",
         "@youwol/flux-three": "0.x",
         "@youwol/flux-files": "0.x",
@@ -82,7 +84,10 @@
             "@youwol/flux-files": "0.x",
             "@youwol/kepler": "0.x",
             "@youwol/io": "0.x",
-            "@youwol/flux-dataframe": "0.x"
+            "@youwol/flux-dataframe": "0.x",
+            "@youwol/fv-button": "0.x",
+            "@youwol/fv-group": "0.x",
+            "@youwol/fv-input": "0.x"
         }
     }
 }
