@@ -153,11 +153,12 @@ export namespace ModuleLoader{
                             positions: df.series.positions.array as any,
                             indices  : df.series.indices.array as any
                         })
-                        context.info("Geometry created", geometry)     
+                        context.info("Geometry created", geometry)  
+                        let suffix = dfs.length>1 ? `_${i}` : ""
                         return createFluxThreeObject3D({
                             object:new KeplerMesh( geometry, defaultMaterial(), df),
-                            id:configuration.objectId+"_"+i,
-                            displayName:configuration.objectId+"_"+i
+                            id:configuration.objectId + suffix,
+                            displayName:configuration.objectName + suffix
                         })
                     })
             })
