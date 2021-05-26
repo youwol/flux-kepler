@@ -4,3 +4,4 @@
 export * from './lib/main';
 export * from './lib/loader.module';
 export * from './lib/iso-contours.module';
+export * from './lib/live-skin-controller.plugin';
