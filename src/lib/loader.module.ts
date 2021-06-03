@@ -49,8 +49,8 @@ export namespace ModuleLoader{
             super({
                 ...forwardParams,
                 ...{ 
-                    objectId: forwardParams['objectId'] ?  forwardParams['objectId']: 'Loaded',
-                    objectName: forwardParams['objectName'] ?  forwardParams['objectName']: 'Loaded'
+                    objectId: forwardParams && forwardParams['objectId'] ?  forwardParams['objectId']: 'Loaded',
+                    objectName: forwardParams && forwardParams['objectName'] ?  forwardParams['objectName']: 'Loaded'
                 }
             })
         }
