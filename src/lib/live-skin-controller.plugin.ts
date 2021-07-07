@@ -75,8 +75,8 @@ export namespace PluginLiveSkinController {
         }
 
         parameters(){
-            return {
-                color: this.lut$.getValue(),
+            let parameters= {
+                lut: this.lut$.getValue(),
                 min: this.min$.getValue(),
                 max: this.max$.getValue(),
                 column: this.column$.getValue(),
@@ -87,6 +87,7 @@ export namespace PluginLiveSkinController {
                 paintingMode: this.paintingMode$.getValue(),
                 activated: this.activated$.getValue()                
             }
+            return parameters
         }
 
         constructor(
@@ -98,7 +99,7 @@ export namespace PluginLiveSkinController {
                 min?: number, 
                 max?: number, 
                 column?: string,
-                projection?: string, 
+                projection?: [string, string, (any) => number], 
                 linesCount?: number, 
                 isoLines?: boolean, 
                 shading?: boolean,
@@ -122,7 +123,7 @@ export namespace PluginLiveSkinController {
 
 
             let defaultProjection = Object.entries(this.getProjections(column))[0]
-            this.projection$ = new BehaviorSubject<[string, string, (any) => number]>([column, ...defaultProjection])
+            this.projection$ = new BehaviorSubject<[string, string, (any) => number]>(projection || [column, ...defaultProjection])
 
             this.object3D$ = combineLatest([
                 this.activated$, this.lut$, this.min$, this.max$, this.column$,
