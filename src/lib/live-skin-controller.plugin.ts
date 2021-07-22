@@ -60,7 +60,7 @@ export namespace PluginLiveSkinController {
         static projectionDict_3D = {
             x: (d) => d[0],
             y: (d) => d[1],
-            z: (d) => d[1],
+            z: (d) => d[2],
             norm: (d) => Math.sqrt(d.reduce((acc, e) => acc + e * e, 0)),
         }
         static projectionDict_6D = {
