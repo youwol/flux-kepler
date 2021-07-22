@@ -1,6 +1,6 @@
 export let AUTO_GENERATED = {
     name: "@youwol/flux-kepler",
     namespace: "youwol",
-    version: "0.0.4",
+    version: "0.0.5",
     description: "Collection of modules to work with structured 3D data"
 }
