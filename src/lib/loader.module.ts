@@ -1,17 +1,16 @@
-import { Context, BuilderView, Flux, Schema, ModuleFlux, Pipe, expect, expectInstanceOf, contract, ModuleError
+import { Context, BuilderView, Flux, Schema, ModuleFlux, Pipe, expectInstanceOf, ModuleError
 } from '@youwol/flux-core'
 
-import {decodeGocadTS} from '@youwol/io'
+import {decodeGocadTS, decodeXYZ} from '@youwol/io'
 
 import * as FluxThree from '@youwol/flux-three'
 import * as FluxFiles from '@youwol/flux-files'
 import{pack} from './main'
 import { map } from 'rxjs/operators'
 import { DataFrame } from '@youwol/dataframe'
-import { createBufferGeometry } from './kepler'
-import { createFluxThreeObject3D, defaultMaterial } from '@youwol/flux-three'
-import { Group, Mesh, Object3D } from 'three'
-import { KeplerMesh } from './models'
+import { createKeplerMesh, createKeplerPoints } from './kepler'
+import { createFluxThreeObject3D } from '@youwol/flux-three'
+import { Group, Object3D } from 'three'
 
 /**
   ## Presentation
@@ -82,9 +81,10 @@ export namespace ModuleLoader{
     export class Module extends ModuleFlux {
 
         static decoders : {[key:string]: (string)=> DataFrame[] } = {
-            '.ts': (buffer: string) => decodeGocadTS(buffer)
+            '.ts': (buffer: string) => decodeGocadTS(buffer),
+            '.xyz': (buffer: string) => decodeXYZ(buffer)
         }
-
+        
         /**
          * This is the output, you can use it to emit messages using *this.result$.next(...)*.
          *
@@ -149,14 +149,15 @@ export namespace ModuleLoader{
                 return context.withChild(
                     `create surface ${i}`,
                     (ctx) => {
-                        let geometry =  createBufferGeometry({
-                            positions: df.series.positions.array as any,
-                            indices  : df.series.indices.array as any
-                        })
-                        context.info("Geometry created", geometry)  
                         let suffix = dfs.length>1 ? `_${i}` : ""
+                        let obj = df.series.indices 
+                            ? createKeplerMesh(df, ctx)
+                            : createKeplerPoints(df, ctx)
+                        
+                        context.info("Object created", obj)  
+                        df.userData.name = configuration.objectId + suffix
                         return createFluxThreeObject3D({
-                            object:new KeplerMesh( geometry, defaultMaterial(), df),
+                            object:obj,
                             id:configuration.objectId + suffix,
                             displayName:configuration.objectName + suffix
                         })
