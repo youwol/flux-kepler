@@ -38,7 +38,7 @@ export class KeplerMesh extends Mesh {
 
     constructor(
         geometry: BufferGeometry,
-        material: Material,
+        material: Material | Material[],
         dataframe: DataFrame) {
         super(geometry, material)
         this.dataframe = dataframe
