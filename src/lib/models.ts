@@ -1,10 +1,18 @@
 import { DataFrame, IArray, Serie } from "@youwol/dataframe";
 import { Property, Schema } from "@youwol/flux-core";
-import { BufferGeometry, Material, Mesh } from "three";
+import { BufferGeometry, Material, Mesh, Points, PointsMaterial } from "three";
 import { pack } from './main'
 
 import * as FluxThree from '@youwol/flux-three'
 
+
+export interface KeplerObject3D {
+    geometry: BufferGeometry
+    material: Material | Material[]
+    dataframe: DataFrame
+    name: string
+    userData: {[key:string]: any}
+}
 /**
  * ## KeplerMesh
  * 
@@ -31,6 +39,39 @@ export class KeplerMesh extends Mesh {
     constructor(
         geometry: BufferGeometry,
         material: Material,
+        dataframe: DataFrame) {
+        super(geometry, material)
+        this.dataframe = dataframe
+    }
+}
+
+
+/**
+ * ## KeplerPoints
+ * 
+ * A Kepler points describes a set of points in the 3D space associated
+ * to a set of properties (a line of a provided [[dataframe]]).
+ * 
+ * There are various ways to create a KeplerPoints, the [[ModuleLoader]] is one example. 
+ *
+ * ## Technical details
+ * 
+ * KeplerPoints inherits from  [[https://threejs.org/docs/#api/en/objects/Points | three.js Mesh]].
+ * The dataframe is supported by this 
+ *  [[https://youwol.github.io/dataframe/dist/docs/pages/Info/description.html | library]].
+ * 
+ */
+ export class KeplerPoints extends Points {
+
+    /**
+     * The dataframe associated to the 3D structure. 
+     * Rows' count and order match those of the vertex.
+     */
+    public readonly dataframe : DataFrame
+
+    constructor(
+        geometry: BufferGeometry,
+        material: PointsMaterial,
         dataframe: DataFrame) {
         super(geometry, material)
         this.dataframe = dataframe
@@ -105,6 +146,20 @@ return (df, helpers) => df.series.A
             return new Function(this.observableFunction)()
 
         return this.observableFunction
+    }
+
+    getObservableSerie(dataframe: DataFrame, expectedItemSize: number): Serie<IArray> {
+
+        let obsFunction = this.getObservableFunction()
+        let obsSerie = obsFunction(dataframe, {})
+
+        if(! (obsSerie instanceof Serie) ) {
+            throw new Error("The result of the observable function should be a serie.")
+        }
+        if( obsSerie.itemSize != expectedItemSize ){
+            throw new Error(`The itemSize of the observable serie should be ${expectedItemSize}.`)
+        }   
+        return obsSerie 
     }
 
     constructor({ observableFunction, ...others }: { observableFunction?: string | ((DataFrame, any) => Serie<IArray>), others?: any } = {}) {
