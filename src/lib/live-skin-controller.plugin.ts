@@ -1,19 +1,21 @@
 import * as _ from 'lodash'
-import {BuilderView, Flux, Schema} from '@youwol/flux-core'
+import {BuilderView, expectAnyOf, Flux, freeContract, Schema} from '@youwol/flux-core'
 
 import { pack } from './main'
 import { map as dfMap } from '@youwol/dataframe'
 import { ModuleViewer } from '@youwol/flux-three'
-import { BufferGeometry, DoubleSide, Group, Mesh, MeshStandardMaterial } from 'three'
-import { KeplerMesh, LookUpTables} from './models'
+import { BufferGeometry, DoubleSide, Group, Mesh, MeshStandardMaterial, Object3D, Points, PointsMaterial } from 'three'
+import { KeplerMesh, KeplerObject3D, KeplerPoints, LookUpTables} from './models'
 import { createIsoContours, IsoContoursParameters } from '@youwol/kepler'
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs'
 import { map, } from 'rxjs/operators'
 import { ExpandableGroup} from '@youwol/fv-group'
-import { ModuleIsoContours } from './iso-contours.module'
+import { ModuleIsoContours } from './iso-contours-skin.module'
 import {PluginLiveSkin as LiveSkinBase, sliderRow, selectRow, headerGrpView, 
     integerRow} from '@youwol/flux-three'
 import { selectProjection } from './views/viewer-widgets.view'
+import { keplerObjectsExpectation } from './utils'
+import { ModulePointsSkin } from './points-skin.module'
 /**
  *  ## Presentation
  *
@@ -34,8 +36,21 @@ import { selectProjection } from './views/viewer-widgets.view'
  */
 export namespace PluginLiveSkinController {
 
+    interface ShadingParameters{
+        lut: string, 
+        min: number, 
+        max: number, 
+        column: string,
+        projection: [string, string, (any) => number], 
+        linesCount: number, 
+        isoLines: boolean, 
+        shading: boolean,
+        paintingMode: string, 
+        activated: boolean,
+        globalParameters$: LiveSkinBase.GlobalParams
+    }
 
-    export class ShadingSkin extends LiveSkinBase.Skin<KeplerMesh>{
+    export abstract class ShadingSkinBase<TMesh extends KeplerObject3D> extends LiveSkinBase.Skin<TMesh>{ 
 
         lutNames = LookUpTables
         paintingNames = ["step", "smooth"]
@@ -48,10 +63,14 @@ export namespace PluginLiveSkinController {
         columnNames: Array<string>
         projection$: BehaviorSubject<[string, string, (any) => number]>
         projectionNames$: Observable<Array<string>>
+
         linesCount$: BehaviorSubject<number>
         isoLines$: BehaviorSubject<boolean>
         shading$: BehaviorSubject<boolean>
         paintingMode$: BehaviorSubject<string>
+
+        globalParameters$: LiveSkinBase.GlobalParams
+        extraParameters$: BehaviorSubject<any>[]
 
         static projectionDict_1D = {
             value: (d) => d
@@ -91,23 +110,14 @@ export namespace PluginLiveSkinController {
         }
 
         constructor(
-            body: KeplerMesh,
+            body: TMesh,
             { lut, min, max, column, projection, linesCount, isoLines, shading, 
-            paintingMode, activated, globalParameters$ }:
-            { 
-                lut?: string, 
-                min?: number, 
-                max?: number, 
-                column?: string,
-                projection?: [string, string, (any) => number], 
-                linesCount?: number, 
-                isoLines?: boolean, 
-                shading?: boolean,
-                paintingMode?: string, 
-                activated: boolean,
-                globalParameters$: LiveSkinBase.GlobalParams
-            }) {
+            paintingMode, activated, globalParameters$ }: ShadingParameters,
+            extraParams$: Array<BehaviorSubject<any>> = []
+            ) {
             super(body)
+            this.extraParameters$ = extraParams$
+            this.globalParameters$ = globalParameters$ 
             this.lut$ = new BehaviorSubject<string>(lut != undefined ? lut : this.lutNames[0])
             this.activated$ = new BehaviorSubject<boolean>(activated)
             this.min$ = new BehaviorSubject<number>(min != undefined ? min : 0)
@@ -121,17 +131,21 @@ export namespace PluginLiveSkinController {
             this.paintingMode$ = new BehaviorSubject<string>(paintingMode != undefined ? paintingMode : "step")
             //this.observableFct$ = new BehaviorSubject<(any) => number>(observableFct != undefined ? observableFct : (d) => d)
 
-
             let defaultProjection = Object.entries(this.getProjections(column))[0]
             this.projection$ = new BehaviorSubject<[string, string, (any) => number]>(projection || [column, ...defaultProjection])
+
+        }
+
+        connect(...extraParams$){
 
             this.object3D$ = combineLatest([
                 this.activated$, this.lut$, this.min$, this.max$, this.column$,
                 this.projection$, this.linesCount$, this.isoLines$, this.shading$, 
-                this.paintingMode$, globalParameters$.visible$, globalParameters$.opacity$
+                this.paintingMode$, this.globalParameters$.visible$, this.globalParameters$.opacity$,
+                ...extraParams$
             ]).pipe(
                 map(([activated, lut, min, max, column, projection, linesCount, isoLines, shading, paintingMode, 
-                    visible, opacity]:
+                    visible, opacity, ...extraParameters]:
                     [boolean, string, number, number, string, [string, string, (any) => number], number, boolean, 
                     boolean, string, boolean, number]) => {
 
@@ -139,7 +153,7 @@ export namespace PluginLiveSkinController {
                     let obsValues = this.getObsValues(projection[0], observableFct)
                     let paintingMesh = undefined
 
-                    let contoursMesh = isoLines ? this.contoursMesh(obsValues, lut, min, max, linesCount, opacity) : undefined
+                    let contoursMesh = isoLines ? this.createMesh(obsValues, lut, min, max, linesCount, opacity, ...extraParameters) : undefined
                     let decoration = new Group()
 
                     decoration.add(...[paintingMesh, contoursMesh].filter(d => d))
@@ -150,7 +164,6 @@ export namespace PluginLiveSkinController {
                     return decoration
                 })
             )
-
         }
 
         getProjections(column: string): { [key: string]: (any) => number } {
@@ -158,18 +171,33 @@ export namespace PluginLiveSkinController {
             let serie = this.body.dataframe.series[column]
 
             if (serie.itemSize == 1)
-                return ShadingSkin.projectionDict_1D
+                return ShadingSkinBase.projectionDict_1D
 
             if (serie.itemSize == 3)
-                return ShadingSkin.projectionDict_3D
+                return ShadingSkinBase.projectionDict_3D
 
             if (serie.itemSize == 6)
-                return ShadingSkin.projectionDict_6D
+                return ShadingSkinBase.projectionDict_6D
             return {}
         }
 
+        abstract createMesh(obsSerie, lut, minNormalized, maxNormalized, linesCount, opacity: number, ...extra)
+        
 
-        contoursMesh(obsSerie, lut, minNormalized, maxNormalized, linesCount, opacity: number) {
+        getObsValues(column, observableFct) {
+            return dfMap( this.body.dataframe.series[column], (d) => observableFct(d)) 
+        }
+    }
+
+    export class MeshShadingSkin extends ShadingSkinBase<KeplerMesh>{
+
+        constructor(
+            body: KeplerMesh, params:ShadingParameters) {
+            super(body, params)
+            this.connect()
+        }
+
+        createMesh(obsSerie, lut, minNormalized, maxNormalized, linesCount, opacity: number) {
 
             if (!(this.body.geometry instanceof BufferGeometry))
                 throw Error("Only mesh using BufferGeometry can be used")
@@ -202,11 +230,64 @@ export namespace PluginLiveSkinController {
             m.userData.__fromMesh = this.body.name
             return m
         }
+    }
 
-        getObsValues(column, observableFct) {
-            return dfMap( this.body.dataframe.series[column], (d) => observableFct(d)) 
+    export interface ShadingPointsParameters extends ShadingParameters{
+        pointSize: number
+    }
+
+    interface PointsShadingParams{
+        pointSize: number
+    }
+
+    export class PointsShadingSkin extends ShadingSkinBase<KeplerPoints>{
+
+        pointSize$ : BehaviorSubject<number>
+
+        constructor(
+            body: KeplerPoints, 
+            params: ShadingPointsParameters & PointsShadingParams) {
+            super(body, params)
+            
+            let material = body.material as PointsMaterial
+            this.pointSize$ =  new BehaviorSubject<number>(params.pointSize != undefined ? params.pointSize : material.size)
+            this.connect(this.pointSize$)
+        }
+
+        parameters(){
+            return {...super.parameters(),...{pointSize:this.pointSize$.getValue()} }
+        }
+
+        createMesh(obsSerie, lut, minNormalized, maxNormalized, linesCount, opacity: number, pointSize: number) {
+
+            if (!(this.body.geometry instanceof BufferGeometry))
+                throw Error("Only geometry of type BufferGeometry can be used")
+
+            let material = new PointsMaterial( { 
+                size: pointSize, 
+                vertexColors: true, 
+                sizeAttenuation:false, 
+                opacity,
+                transparent: opacity != 1 
+            });
+
+            let m = ModulePointsSkin.createPointsSkin(this.body, obsSerie, {lut, count:linesCount }, material)
+
+            if(m==undefined)
+                return undefined
+            m.name = this.body.name + "_pointsShading"
+            m.userData.__fromMesh = this.body.name
+            return m
         }
     }
+    
+    let expectKeplerObjects = expectAnyOf({
+        description:"either a KeplerMesh or a KeplerPoints",
+        when:[
+            keplerObjectsExpectation("KeplerMesh",['object', 'mesh'], KeplerMesh),
+            keplerObjectsExpectation("KeplerPoints",['object', 'points'], KeplerPoints),
+        ]
+    }) 
 
     /**
      * ## Persistent Data  🔧
@@ -226,10 +307,17 @@ export namespace PluginLiveSkinController {
         LiveSkinBase.wireframeSkinFactory( (body) => ({activated:false}) ),
         LiveSkinBase.paintingSkinFactory( (body) => ({activated:false}) ),   
         {
-            Type: ShadingSkin,
+            Type: MeshShadingSkin,
+            isConsistent: (body: Object3D) => body instanceof KeplerMesh,
             defaultParameters: (_: Mesh) => ({activated: true}),
-            view: (skin: ShadingSkin ) => renderShadingSkinGroup('Shading', skin)
-        }     
+            view: (skin: MeshShadingSkin ) => renderMeshShadingSkinGroupView('Shading', skin)
+        },
+        {
+            Type: PointsShadingSkin,
+            isConsistent: (body: Object3D) => body instanceof KeplerPoints,
+            defaultParameters: (_: Points) => ({activated: true}),
+            view: (skin: PointsShadingSkin ) => renderPointsShadingSkinGroupView('Shading', skin)
+        }         
     ]
     /** ## Module
      * 
@@ -257,13 +345,25 @@ export namespace PluginLiveSkinController {
             super({
                 ...params, 
                 skinsFactory, 
-                contract: LiveSkinBase.getContractForTypedObject3D<KeplerMesh>(KeplerMesh, "KeplerMesh") 
+                contract: expectKeplerObjects
             } )
         }
     }
 
-    function renderShadingSkinGroup(title: string, skin: ShadingSkin, withChildren = {}) {
+    function renderMeshShadingSkinGroupView(title: string, skin: MeshShadingSkin){
 
+        return renderShadingSkinGroupView(title, skin)
+    }
+
+    function renderPointsShadingSkinGroupView(title: string, skin: PointsShadingSkin){
+
+        let size = sliderRow('size', 0, 20, skin.pointSize$)
+        return renderShadingSkinGroupView(title, skin, [size])
+    }
+
+    function renderShadingSkinGroupView(
+        title: string, 
+        skin: ShadingSkinBase<KeplerObject3D>, withChildren = []) {
 
         let column$ = new BehaviorSubject<string>(Object.keys(skin.body.dataframe.series)[0])
 
@@ -283,6 +383,7 @@ export namespace PluginLiveSkinController {
         let contentView = (state) => ({
             class:'px-1',  
             children:[
+                ...withChildren,
                 {
                     class:'d-flex align-items-center',
                     children:[
@@ -310,4 +411,5 @@ export namespace PluginLiveSkinController {
             class: 'fv-bg-background fv-text-primary' 
         } as any)
     }
+
 }

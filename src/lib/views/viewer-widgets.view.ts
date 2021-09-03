@@ -18,8 +18,7 @@ export function selectProjection(
 
     let projectionNames$ = column$.pipe(
         map(column => {
-            let names = getNames(column) //Object.keys(config.getProjections(column))
-            console.log(names)
+            let names = getNames(column) 
             return names
         }),
         tap( names => selection$.next(names[0]))
