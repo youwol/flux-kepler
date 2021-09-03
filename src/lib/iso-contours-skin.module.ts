@@ -1,9 +1,9 @@
 import { Context, BuilderView, Flux, Schema, ModuleFlux, Pipe, Property} from '@youwol/flux-core'
 
 import{pack} from './main'
-import { array, Serie } from '@youwol/dataframe'
+import { array, IArray, Serie } from '@youwol/dataframe'
 import { createFluxThreeObject3D } from '@youwol/flux-three'
-import { DoubleSide, Group, MeshStandardMaterial, Object3D } from 'three'
+import { BoxGeometry, DoubleSide, Group, MeshStandardMaterial, Object3D } from 'three'
 import { KeplerMesh, LookUpTables, SkinConfiguration } from './models'
 import {createIsoContours, generateIsos, IsoContoursParameters} from '@youwol/kepler'
 import { svgSkinIcon } from './icons'
@@ -76,6 +76,7 @@ export namespace ModuleIsoContours{
     })
     export class PersistentData extends SkinConfiguration {
        
+
         /**
          * Whether or not to fill between iso contours. Default to true.
          */
@@ -95,11 +96,41 @@ export namespace ModuleIsoContours{
         /**
          * Look up table, default to Rainbow
          */
-         @Property({
+        @Property({
             description: "Look up table, default to Rainbow",
             enum: LookUpTables
         })
         public readonly lut        : string = 'Rainbow'
+
+
+
+        /**
+         * Deformation function, only used if scaling factor is not zero
+         */
+         @Property({
+            description: " Deformation function",
+            type:"code"
+        })
+        public readonly deformObservableFct : string | ((DataFrame, any) => Serie<IArray>)
+        = `/* This is just an example that works only if the serie A is in the dataframe */
+        return (df, helpers) => df.series.A
+        `
+
+        getDeformObservableFunction(): (DataFrame, any) => Serie<IArray> {
+
+            if (typeof (this.deformObservableFct) == 'string')
+                return new Function(this.deformObservableFct)()
+    
+            return this.deformObservableFct
+        }
+
+        /**
+         * Scaling factor
+         */
+         @Property({
+            description: "Deformation scaling factor"
+        })
+        public readonly deformScalingFactor : number = 0
 
 
         public readonly lockLut    : boolean = true
@@ -107,8 +138,8 @@ export namespace ModuleIsoContours{
         public readonly min        : number = 0
         public readonly max        : number = 1
 
-        constructor({filled, count, lut, ...others} : {
-            filled?:boolean, count?:number, lut?:string, others?:any} = {}) {
+        constructor({filled, count, lut, deformObservableFct, deformScalingFactor, ...others} : {
+            filled?:boolean, count?:number, lut?:string, deformObservableFct?: string, deformScalingFactor?: number, others?:any} = {}) {
             super( {
                 ...others,
                 ...{ 
@@ -116,15 +147,15 @@ export namespace ModuleIsoContours{
                     objectName: others['objectName'] ?  others['objectName']: 'Contours'
                 }
             })
-
-            const filtered = Object.entries({filled, count, lut})
+            
+            const filtered = Object.entries({filled, count, lut, deformObservableFct, deformScalingFactor})
             .filter( ([k,v]) => v != undefined)
             .reduce((acc, [k,v]) => ({...acc, ...{[k]: v}}), {});
 
             Object.assign(this, filtered)
         }
     }
-
+    
 
     /** ## Module
      * 
@@ -161,7 +192,7 @@ export namespace ModuleIsoContours{
         }
 
         
-        createIsoContours( meshes: KeplerMesh[], configuration: PersistentData, context: Context ) {
+        createIsoContours( meshes: any, configuration: PersistentData, context: Context ) {
 
             let skins = meshes.map( (mesh: KeplerMesh, i: number) => {
                 return context.withChild(
@@ -186,7 +217,8 @@ export namespace ModuleIsoContours{
                             lut: configuration.lut
                         })
                         let material =  new MeshStandardMaterial({ color: 0xffffff, vertexColors: true, side:DoubleSide })
-                        let skin = createIsoContours(mesh,obsSerie,{parameters, material})
+                        let meshDeformed = deformMesh(mesh, configuration, ctx)
+                        let skin = createIsoContours(meshDeformed,obsSerie,{parameters, material})
                         ctx.info("Contours created")
                         ctx.info("Geometry", skin.geometry )
                         ctx.info("Mesh", skin )
@@ -207,5 +239,49 @@ export namespace ModuleIsoContours{
             this.output$.next({data:obj, context})
             context.terminate()
         }
+    }
+
+    /**
+     * From the provided mesh, return a new version deformed according to the parameters in the 
+     * configuration
+     * 
+     * @param rawMesh 
+     * @param configuration 
+     */
+    function deformMesh(rawMesh: KeplerMesh, configuration: PersistentData, context: Context){
+
+        return context.withChild(
+            `apply deformation`,
+            (ctx) => {
+                if(configuration.deformScalingFactor==0){
+                    ctx.info("Scaling deform factor = 0 => no deformation applied")
+                    return rawMesh
+                }
+                let dataframe = rawMesh.dataframe
+                let obsFunction = configuration.getDeformObservableFunction()
+                let obsSerie = obsFunction(dataframe, {})
+                ctx.info("Scaling deform factor = 0 => no deformation applied")
+                ctx.info("Displacement serie", obsSerie)
+
+                if( obsSerie.itemSize != 3 ){
+                    throw new Error("The itemSize of the observable serie for deformation should be 3 (i.e. a 3D vector).")
+                }   
+                let factor = configuration.deformScalingFactor
+
+                let displacements = obsSerie.map( ([x,y,z]) => {
+                    return [factor*x, factor*y, factor*z]
+                })
+                let geometry = rawMesh.geometry.clone()
+                let positions = geometry.getAttribute('position')
+                for(let iVertex=0; iVertex<positions.count; iVertex++) {
+                    let displacement = displacements.itemAt(iVertex)
+                    positions.setX(iVertex,positions.getX(iVertex) + displacement[0])
+                    positions.setY(iVertex,positions.getY(iVertex) + displacement[1])
+                    positions.setZ(iVertex,positions.getZ(iVertex) + displacement[2])
+                }
+                let mesh = new KeplerMesh(geometry, rawMesh.material, dataframe)
+                return mesh
+            })
+        
     }
 }
