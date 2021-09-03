@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>KeplerMesh | @youwol/flux-kepler</title>
+	<title>KeplerPoints | @youwol/flux-kepler</title>
 	<meta name="description" content="Documentation for @youwol/flux-kepler">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -58,10 +58,10 @@
 					<a href="../modules/lib_models.html">lib/models</a>
 				</li>
 				<li>
-					<a href="lib_models.keplermesh.html">KeplerMesh</a>
+					<a href="lib_models.keplerpoints.html">KeplerPoints</a>
 				</li>
 			</ul>
-			<h1>Class KeplerMesh</h1>
+			<h1>Class KeplerPoints</h1>
 		</div>
 	</div>
 </header>
@@ -71,17 +71,17 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<a href="#keplermesh" id="keplermesh" style="color: inherit; text-decoration: none;">
-							<h2>KeplerMesh</h2>
+						<a href="#keplerpoints" id="keplerpoints" style="color: inherit; text-decoration: none;">
+							<h2>KeplerPoints</h2>
 						</a>
 					</div>
-					<p>A Kepler mesh describes a 3D structure for which every vertex are associated
-					to a line of a provided <a href="lib_models.keplermesh.html#dataframe">dataframe</a>.</p>
-					<p>There are various ways to create a Kepler Mesh, the <a href="../modules/lib_loader_module.moduleloader.html">ModuleLoader</a> is one example.</p>
+					<p>A Kepler points describes a set of points in the 3D space associated
+					to a set of properties (a line of a provided <a href="lib_models.keplerpoints.html#dataframe">dataframe</a>).</p>
+					<p>There are various ways to create a KeplerPoints, the <a href="../modules/lib_loader_module.moduleloader.html">ModuleLoader</a> is one example.</p>
 					<a href="#technical-details" id="technical-details" style="color: inherit; text-decoration: none;">
 						<h2>Technical details</h2>
 					</a>
-					<p>KeplerMesh inherits from  <a href="https://threejs.org/docs/#api/en/objects/Mesh" class="external">three.js Mesh</a>.
+					<p>KeplerPoints inherits from  <a href="https://threejs.org/docs/#api/en/objects/Points" class="external">three.js Mesh</a>.
 						The dataframe is supported by this
 					<a href="https://youwol.github.io/dataframe/dist/docs/pages/Info/description.html" class="external">library</a>.</p>
 				</div>
@@ -90,10 +90,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">Mesh</span>
+						<span class="tsd-signature-type">Points</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">KeplerMesh</span>
+								<span class="target">KeplerPoints</span>
 							</li>
 						</ul>
 					</li>
@@ -106,99 +106,99 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="lib_models.keplermesh.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="lib_models.keplerpoints.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#animations" class="tsd-kind-icon">animations</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#castshadow" class="tsd-kind-icon">cast<wbr>Shadow</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#children" class="tsd-kind-icon">children</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#customdepthmaterial" class="tsd-kind-icon">custom<wbr>Depth<wbr>Material</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#customdistancematerial" class="tsd-kind-icon">custom<wbr>Distance<wbr>Material</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_models.keplermesh.html#dataframe" class="tsd-kind-icon">dataframe</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#frustumculled" class="tsd-kind-icon">frustum<wbr>Culled</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#geometry" class="tsd-kind-icon">geometry</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#ismesh" class="tsd-kind-icon">is<wbr>Mesh</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#isobject3d" class="tsd-kind-icon">is<wbr>Object3D</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#layers" class="tsd-kind-icon">layers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#material" class="tsd-kind-icon">material</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#matrix" class="tsd-kind-icon">matrix</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#matrixautoupdate" class="tsd-kind-icon">matrix<wbr>Auto<wbr>Update</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#matrixworld" class="tsd-kind-icon">matrix<wbr>World</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#matrixworldneedsupdate" class="tsd-kind-icon">matrix<wbr>World<wbr>Needs<wbr>Update</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#modelviewmatrix" class="tsd-kind-icon">model<wbr>View<wbr>Matrix</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#morphtargetdictionary" class="tsd-kind-icon">morph<wbr>Target<wbr>Dictionary</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#morphtargetinfluences" class="tsd-kind-icon">morph<wbr>Target<wbr>Influences</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#normalmatrix" class="tsd-kind-icon">normal<wbr>Matrix</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#onafterrender" class="tsd-kind-icon">on<wbr>After<wbr>Render</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#onbeforerender" class="tsd-kind-icon">on<wbr>Before<wbr>Render</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#parent" class="tsd-kind-icon">parent</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#position" class="tsd-kind-icon">position</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#quaternion" class="tsd-kind-icon">quaternion</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#receiveshadow" class="tsd-kind-icon">receive<wbr>Shadow</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#renderorder" class="tsd-kind-icon">render<wbr>Order</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#rotation" class="tsd-kind-icon">rotation</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#scale" class="tsd-kind-icon">scale</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#type" class="tsd-kind-icon">type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#up" class="tsd-kind-icon">up</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#userdata" class="tsd-kind-icon">user<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#uuid" class="tsd-kind-icon">uuid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#visible" class="tsd-kind-icon">visible</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="lib_models.keplermesh.html#defaultmatrixautoupdate" class="tsd-kind-icon">Default<wbr>Matrix<wbr>Auto<wbr>Update</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="lib_models.keplermesh.html#defaultup" class="tsd-kind-icon">Default<wbr>Up</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#animations" class="tsd-kind-icon">animations</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#castshadow" class="tsd-kind-icon">cast<wbr>Shadow</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#children" class="tsd-kind-icon">children</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#customdepthmaterial" class="tsd-kind-icon">custom<wbr>Depth<wbr>Material</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#customdistancematerial" class="tsd-kind-icon">custom<wbr>Distance<wbr>Material</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_models.keplerpoints.html#dataframe" class="tsd-kind-icon">dataframe</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#frustumculled" class="tsd-kind-icon">frustum<wbr>Culled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#geometry" class="tsd-kind-icon">geometry</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#isobject3d" class="tsd-kind-icon">is<wbr>Object3D</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#ispoints" class="tsd-kind-icon">is<wbr>Points</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#layers" class="tsd-kind-icon">layers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#material" class="tsd-kind-icon">material</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#matrix" class="tsd-kind-icon">matrix</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#matrixautoupdate" class="tsd-kind-icon">matrix<wbr>Auto<wbr>Update</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#matrixworld" class="tsd-kind-icon">matrix<wbr>World</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#matrixworldneedsupdate" class="tsd-kind-icon">matrix<wbr>World<wbr>Needs<wbr>Update</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#modelviewmatrix" class="tsd-kind-icon">model<wbr>View<wbr>Matrix</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#morphtargetdictionary" class="tsd-kind-icon">morph<wbr>Target<wbr>Dictionary</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#morphtargetinfluences" class="tsd-kind-icon">morph<wbr>Target<wbr>Influences</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#normalmatrix" class="tsd-kind-icon">normal<wbr>Matrix</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#onafterrender" class="tsd-kind-icon">on<wbr>After<wbr>Render</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#onbeforerender" class="tsd-kind-icon">on<wbr>Before<wbr>Render</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#position" class="tsd-kind-icon">position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#quaternion" class="tsd-kind-icon">quaternion</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#receiveshadow" class="tsd-kind-icon">receive<wbr>Shadow</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#renderorder" class="tsd-kind-icon">render<wbr>Order</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#rotation" class="tsd-kind-icon">rotation</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#scale" class="tsd-kind-icon">scale</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#up" class="tsd-kind-icon">up</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#userdata" class="tsd-kind-icon">user<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#uuid" class="tsd-kind-icon">uuid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#visible" class="tsd-kind-icon">visible</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="lib_models.keplerpoints.html#defaultmatrixautoupdate" class="tsd-kind-icon">Default<wbr>Matrix<wbr>Auto<wbr>Update</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external"><a href="lib_models.keplerpoints.html#defaultup" class="tsd-kind-icon">Default<wbr>Up</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited tsd-is-external">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#add" class="tsd-kind-icon">add</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#applymatrix4" class="tsd-kind-icon">apply<wbr>Matrix4</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#applyquaternion" class="tsd-kind-icon">apply<wbr>Quaternion</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#attach" class="tsd-kind-icon">attach</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#clone" class="tsd-kind-icon">clone</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#copy" class="tsd-kind-icon">copy</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#getobjectbyid" class="tsd-kind-icon">get<wbr>Object<wbr>ById</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#getobjectbyname" class="tsd-kind-icon">get<wbr>Object<wbr>ByName</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#getobjectbyproperty" class="tsd-kind-icon">get<wbr>Object<wbr>ByProperty</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#getworlddirection" class="tsd-kind-icon">get<wbr>World<wbr>Direction</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#getworldposition" class="tsd-kind-icon">get<wbr>World<wbr>Position</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#getworldquaternion" class="tsd-kind-icon">get<wbr>World<wbr>Quaternion</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#getworldscale" class="tsd-kind-icon">get<wbr>World<wbr>Scale</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#localtoworld" class="tsd-kind-icon">local<wbr>ToWorld</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#lookat" class="tsd-kind-icon">look<wbr>At</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#raycast" class="tsd-kind-icon">raycast</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#remove" class="tsd-kind-icon">remove</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#rotateonaxis" class="tsd-kind-icon">rotate<wbr>OnAxis</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#rotateonworldaxis" class="tsd-kind-icon">rotate<wbr>OnWorld<wbr>Axis</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#rotatex" class="tsd-kind-icon">rotateX</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#rotatey" class="tsd-kind-icon">rotateY</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#rotatez" class="tsd-kind-icon">rotateZ</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#setrotationfromaxisangle" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Axis<wbr>Angle</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#setrotationfromeuler" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Euler</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#setrotationfrommatrix" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Matrix</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#setrotationfromquaternion" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Quaternion</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#tojson" class="tsd-kind-icon">toJSON</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#translateonaxis" class="tsd-kind-icon">translate<wbr>OnAxis</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#translatex" class="tsd-kind-icon">translateX</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#translatey" class="tsd-kind-icon">translateY</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#translatez" class="tsd-kind-icon">translateZ</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#traverse" class="tsd-kind-icon">traverse</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#traverseancestors" class="tsd-kind-icon">traverse<wbr>Ancestors</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#traversevisible" class="tsd-kind-icon">traverse<wbr>Visible</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#updatematrix" class="tsd-kind-icon">update<wbr>Matrix</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#updatematrixworld" class="tsd-kind-icon">update<wbr>Matrix<wbr>World</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#updatemorphtargets" class="tsd-kind-icon">update<wbr>Morph<wbr>Targets</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#updateworldmatrix" class="tsd-kind-icon">update<wbr>World<wbr>Matrix</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplermesh.html#worldtolocal" class="tsd-kind-icon">world<wbr>ToLocal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#add" class="tsd-kind-icon">add</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#applymatrix4" class="tsd-kind-icon">apply<wbr>Matrix4</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#applyquaternion" class="tsd-kind-icon">apply<wbr>Quaternion</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#attach" class="tsd-kind-icon">attach</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#clone" class="tsd-kind-icon">clone</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#copy" class="tsd-kind-icon">copy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#getobjectbyid" class="tsd-kind-icon">get<wbr>Object<wbr>ById</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#getobjectbyname" class="tsd-kind-icon">get<wbr>Object<wbr>ByName</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#getobjectbyproperty" class="tsd-kind-icon">get<wbr>Object<wbr>ByProperty</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#getworlddirection" class="tsd-kind-icon">get<wbr>World<wbr>Direction</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#getworldposition" class="tsd-kind-icon">get<wbr>World<wbr>Position</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#getworldquaternion" class="tsd-kind-icon">get<wbr>World<wbr>Quaternion</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#getworldscale" class="tsd-kind-icon">get<wbr>World<wbr>Scale</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#localtoworld" class="tsd-kind-icon">local<wbr>ToWorld</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#lookat" class="tsd-kind-icon">look<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#raycast" class="tsd-kind-icon">raycast</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#rotateonaxis" class="tsd-kind-icon">rotate<wbr>OnAxis</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#rotateonworldaxis" class="tsd-kind-icon">rotate<wbr>OnWorld<wbr>Axis</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#rotatex" class="tsd-kind-icon">rotateX</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#rotatey" class="tsd-kind-icon">rotateY</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#rotatez" class="tsd-kind-icon">rotateZ</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#setrotationfromaxisangle" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Axis<wbr>Angle</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#setrotationfromeuler" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Euler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#setrotationfrommatrix" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Matrix</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#setrotationfromquaternion" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Quaternion</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#tojson" class="tsd-kind-icon">toJSON</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#translateonaxis" class="tsd-kind-icon">translate<wbr>OnAxis</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#translatex" class="tsd-kind-icon">translateX</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#translatey" class="tsd-kind-icon">translateY</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#translatez" class="tsd-kind-icon">translateZ</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#traverse" class="tsd-kind-icon">traverse</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#traverseancestors" class="tsd-kind-icon">traverse<wbr>Ancestors</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#traversevisible" class="tsd-kind-icon">traverse<wbr>Visible</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#updatematrix" class="tsd-kind-icon">update<wbr>Matrix</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#updatematrixworld" class="tsd-kind-icon">update<wbr>Matrix<wbr>World</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#updatemorphtargets" class="tsd-kind-icon">update<wbr>Morph<wbr>Targets</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#updateworldmatrix" class="tsd-kind-icon">update<wbr>World<wbr>Matrix</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_models.keplerpoints.html#worldtolocal" class="tsd-kind-icon">world<wbr>ToLocal</a></li>
 							</ul>
 						</section>
 					</div>
@@ -210,14 +210,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Kepler<wbr>Mesh<span class="tsd-signature-symbol">(</span>geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol">[]</span>, dataframe<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataFrame</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Kepler<wbr>Points<span class="tsd-signature-symbol">(</span>geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PointsMaterial</span>, dataframe<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataFrame</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides Mesh.constructor</p>
+								<p>Overrides Points.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/models.ts#L37">src/lib/models.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/models.ts#L70">src/lib/models.ts:70</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -226,13 +226,13 @@
 									<h5>geometry: <span class="tsd-signature-type">BufferGeometry</span></h5>
 								</li>
 								<li>
-									<h5>material: <span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>material: <span class="tsd-signature-type">PointsMaterial</span></h5>
 								</li>
 								<li>
 									<h5>dataframe: <span class="tsd-signature-type">DataFrame</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -244,7 +244,7 @@
 					<h3>animations</h3>
 					<div class="tsd-signature tsd-kind-icon">animations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AnimationClip</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.animations</p>
+						<p>Inherited from Points.animations</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:159</li>
 						</ul>
@@ -265,7 +265,7 @@
 					<h3>cast<wbr>Shadow</h3>
 					<div class="tsd-signature tsd-kind-icon">cast<wbr>Shadow<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.castShadow</p>
+						<p>Inherited from Points.castShadow</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:132</li>
 						</ul>
@@ -286,7 +286,7 @@
 					<h3>children</h3>
 					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.children</p>
+						<p>Inherited from Points.children</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:51</li>
 						</ul>
@@ -307,7 +307,7 @@
 					<h3>custom<wbr>Depth<wbr>Material</h3>
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Depth<wbr>Material<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Material</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.customDepthMaterial</p>
+						<p>Inherited from Points.customDepthMaterial</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:173</li>
 						</ul>
@@ -326,7 +326,7 @@
 					<h3>custom<wbr>Distance<wbr>Material</h3>
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Distance<wbr>Material<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Material</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.customDistanceMaterial</p>
+						<p>Inherited from Points.customDistanceMaterial</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:178</li>
 						</ul>
@@ -343,7 +343,7 @@
 					<div class="tsd-signature tsd-kind-icon">dataframe<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">DataFrame</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/models.ts#L37">src/lib/models.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/models.ts#L70">src/lib/models.ts:70</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -358,7 +358,7 @@
 					<h3>frustum<wbr>Culled</h3>
 					<div class="tsd-signature tsd-kind-icon">frustum<wbr>Culled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.frustumCulled</p>
+						<p>Inherited from Points.frustumCulled</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:145</li>
 						</ul>
@@ -380,18 +380,23 @@
 					<h3>geometry</h3>
 					<div class="tsd-signature tsd-kind-icon">geometry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BufferGeometry</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.geometry</p>
+						<p>Inherited from Points.geometry</p>
 						<ul>
-							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:13</li>
+							<li>Defined in node_modules/@types/three/src/objects/Points.d.ts:28</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An instance of BufferGeometry, where each vertex designates the position of a particle in the system.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="id" class="tsd-anchor"></a>
 					<h3>id</h3>
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.id</p>
+						<p>Inherited from Points.id</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:26</li>
 						</ul>
@@ -403,22 +408,11 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-					<a name="ismesh" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Mesh</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Mesh<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from Mesh.isMesh</p>
-						<ul>
-							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:17</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="isobject3d" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Object3D</h3>
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Object3D<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.isObject3D</p>
+						<p>Inherited from Points.isObject3D</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:184</li>
 						</ul>
@@ -431,11 +425,22 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
+					<a name="ispoints" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Points</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Points<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from Points.isPoints</p>
+						<ul>
+							<li>Defined in node_modules/@types/three/src/objects/Points.d.ts:23</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="layers" class="tsd-anchor"></a>
 					<h3>layers</h3>
 					<div class="tsd-signature tsd-kind-icon">layers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Layers</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.layers</p>
+						<p>Inherited from Points.layers</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:121</li>
 						</ul>
@@ -453,18 +458,23 @@
 					<h3>material</h3>
 					<div class="tsd-signature tsd-kind-icon">material<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.material</p>
+						<p>Inherited from Points.material</p>
 						<ul>
-							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:14</li>
+							<li>Defined in node_modules/@types/three/src/objects/Points.d.ts:33</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An instance of Material, defining the object&#39;s appearance. Default is a PointsMaterial with randomised colour.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="matrix" class="tsd-anchor"></a>
 					<h3>matrix</h3>
 					<div class="tsd-signature tsd-kind-icon">matrix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Matrix4</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.matrix</p>
+						<p>Inherited from Points.matrix</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:97</li>
 						</ul>
@@ -485,7 +495,7 @@
 					<h3>matrix<wbr>Auto<wbr>Update</h3>
 					<div class="tsd-signature tsd-kind-icon">matrix<wbr>Auto<wbr>Update<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.matrixAutoUpdate</p>
+						<p>Inherited from Points.matrixAutoUpdate</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:110</li>
 						</ul>
@@ -507,7 +517,7 @@
 					<h3>matrix<wbr>World</h3>
 					<div class="tsd-signature tsd-kind-icon">matrix<wbr>World<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Matrix4</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.matrixWorld</p>
+						<p>Inherited from Points.matrixWorld</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:103</li>
 						</ul>
@@ -528,7 +538,7 @@
 					<h3>matrix<wbr>World<wbr>Needs<wbr>Update</h3>
 					<div class="tsd-signature tsd-kind-icon">matrix<wbr>World<wbr>Needs<wbr>Update<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.matrixWorldNeedsUpdate</p>
+						<p>Inherited from Points.matrixWorldNeedsUpdate</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:116</li>
 						</ul>
@@ -549,7 +559,7 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> model<wbr>View<wbr>Matrix</h3>
 					<div class="tsd-signature tsd-kind-icon">model<wbr>View<wbr>Matrix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Matrix4</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.modelViewMatrix</p>
+						<p>Inherited from Points.modelViewMatrix</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:86</li>
 						</ul>
@@ -567,9 +577,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> morph<wbr>Target<wbr>Dictionary</h3>
 					<div class="tsd-signature tsd-kind-icon">morph<wbr>Target<wbr>Dictionary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.morphTargetDictionary</p>
+						<p>Inherited from Points.morphTargetDictionary</p>
 						<ul>
-							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:16</li>
+							<li>Defined in node_modules/@types/three/src/objects/Points.d.ts:22</li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -586,9 +596,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> morph<wbr>Target<wbr>Influences</h3>
 					<div class="tsd-signature tsd-kind-icon">morph<wbr>Target<wbr>Influences<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.morphTargetInfluences</p>
+						<p>Inherited from Points.morphTargetInfluences</p>
 						<ul>
-							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:15</li>
+							<li>Defined in node_modules/@types/three/src/objects/Points.d.ts:21</li>
 						</ul>
 					</aside>
 				</section>
@@ -597,7 +607,7 @@
 					<h3>name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.name</p>
+						<p>Inherited from Points.name</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:34</li>
 						</ul>
@@ -618,7 +628,7 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> normal<wbr>Matrix</h3>
 					<div class="tsd-signature tsd-kind-icon">normal<wbr>Matrix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Matrix3</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.normalMatrix</p>
+						<p>Inherited from Points.normalMatrix</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:91</li>
 						</ul>
@@ -636,7 +646,7 @@
 					<h3>on<wbr>After<wbr>Render</h3>
 					<div class="tsd-signature tsd-kind-icon">on<wbr>After<wbr>Render<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.onAfterRender</p>
+						<p>Inherited from Points.onAfterRender</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:201</li>
 						</ul>
@@ -688,7 +698,7 @@
 					<h3>on<wbr>Before<wbr>Render</h3>
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Before<wbr>Render<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>renderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLRenderer</span>, scene<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Scene</span>, camera<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Camera</span>, geometry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span>, material<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Material</span>, group<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.onBeforeRender</p>
+						<p>Inherited from Points.onBeforeRender</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:189</li>
 						</ul>
@@ -740,7 +750,7 @@
 					<h3>parent</h3>
 					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Object3D</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.parent</p>
+						<p>Inherited from Points.parent</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:45</li>
 						</ul>
@@ -761,7 +771,7 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> position</h3>
 					<div class="tsd-signature tsd-kind-icon">position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Vector3</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.position</p>
+						<p>Inherited from Points.position</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:63</li>
 						</ul>
@@ -782,7 +792,7 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> quaternion</h3>
 					<div class="tsd-signature tsd-kind-icon">quaternion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Quaternion</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.quaternion</p>
+						<p>Inherited from Points.quaternion</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:75</li>
 						</ul>
@@ -803,7 +813,7 @@
 					<h3>receive<wbr>Shadow</h3>
 					<div class="tsd-signature tsd-kind-icon">receive<wbr>Shadow<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.receiveShadow</p>
+						<p>Inherited from Points.receiveShadow</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:138</li>
 						</ul>
@@ -824,7 +834,7 @@
 					<h3>render<wbr>Order</h3>
 					<div class="tsd-signature tsd-kind-icon">render<wbr>Order<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.renderOrder</p>
+						<p>Inherited from Points.renderOrder</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:153</li>
 						</ul>
@@ -847,7 +857,7 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> rotation</h3>
 					<div class="tsd-signature tsd-kind-icon">rotation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Euler</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.rotation</p>
+						<p>Inherited from Points.rotation</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:69</li>
 						</ul>
@@ -868,7 +878,7 @@
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> scale</h3>
 					<div class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Vector3</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.scale</p>
+						<p>Inherited from Points.scale</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:81</li>
 						</ul>
@@ -887,11 +897,11 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 					<a name="type" class="tsd-anchor"></a>
 					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;Points&quot;</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.type</p>
+						<p>Inherited from Points.type</p>
 						<ul>
-							<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:18</li>
+							<li>Defined in node_modules/@types/three/src/objects/Points.d.ts:20</li>
 						</ul>
 					</aside>
 				</section>
@@ -900,7 +910,7 @@
 					<h3>up</h3>
 					<div class="tsd-signature tsd-kind-icon">up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Vector3</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.up</p>
+						<p>Inherited from Points.up</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:57</li>
 						</ul>
@@ -921,7 +931,7 @@
 					<h3>user<wbr>Data</h3>
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.userData</p>
+						<p>Inherited from Points.userData</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:165</li>
 						</ul>
@@ -950,7 +960,7 @@
 					<h3>uuid</h3>
 					<div class="tsd-signature tsd-kind-icon">uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.uuid</p>
+						<p>Inherited from Points.uuid</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:28</li>
 						</ul>
@@ -961,7 +971,7 @@
 					<h3>visible</h3>
 					<div class="tsd-signature tsd-kind-icon">visible<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.visible</p>
+						<p>Inherited from Points.visible</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:126</li>
 						</ul>
@@ -982,7 +992,7 @@
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> Default<wbr>Matrix<wbr>Auto<wbr>Update</h3>
 					<div class="tsd-signature tsd-kind-icon">Default<wbr>Matrix<wbr>Auto<wbr>Update<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.DefaultMatrixAutoUpdate</p>
+						<p>Inherited from Points.DefaultMatrixAutoUpdate</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:211</li>
 						</ul>
@@ -993,7 +1003,7 @@
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> Default<wbr>Up</h3>
 					<div class="tsd-signature tsd-kind-icon">Default<wbr>Up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Vector3</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from Mesh.DefaultUp</p>
+						<p>Inherited from Points.DefaultUp</p>
 						<ul>
 							<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:210</li>
 						</ul>
@@ -1006,12 +1016,12 @@
 					<a name="add" class="tsd-anchor"></a>
 					<h3>add</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.add</p>
+								<p>Inherited from Points.add</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:305</li>
 								</ul>
@@ -1027,7 +1037,7 @@
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>object: <span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1040,7 +1050,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.addEventListener</p>
+								<p>Inherited from Points.addEventListener</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:26</li>
 								</ul>
@@ -1096,7 +1106,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.applyMatrix4</p>
+								<p>Inherited from Points.applyMatrix4</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:216</li>
 								</ul>
@@ -1120,12 +1130,12 @@
 					<a name="applyquaternion" class="tsd-anchor"></a>
 					<h3>apply<wbr>Quaternion</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">apply<wbr>Quaternion<span class="tsd-signature-symbol">(</span>quaternion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Quaternion</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">apply<wbr>Quaternion<span class="tsd-signature-symbol">(</span>quaternion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Quaternion</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.applyQuaternion</p>
+								<p>Inherited from Points.applyQuaternion</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:218</li>
 								</ul>
@@ -1136,7 +1146,7 @@
 									<h5>quaternion: <span class="tsd-signature-type">Quaternion</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1144,12 +1154,12 @@
 					<a name="attach" class="tsd-anchor"></a>
 					<h3>attach</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">attach<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">attach<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.attach</p>
+								<p>Inherited from Points.attach</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:320</li>
 								</ul>
@@ -1165,7 +1175,7 @@
 									<h5>object: <span class="tsd-signature-type">Object3D</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1173,12 +1183,12 @@
 					<a name="clear" class="tsd-anchor"></a>
 					<h3>clear</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.clear</p>
+								<p>Inherited from Points.clear</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:315</li>
 								</ul>
@@ -1188,7 +1198,7 @@
 									<p>Removes all child objects.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1196,12 +1206,12 @@
 					<a name="clone" class="tsd-anchor"></a>
 					<h3>clone</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">clone<span class="tsd-signature-symbol">(</span>recursive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">clone<span class="tsd-signature-symbol">(</span>recursive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.clone</p>
+								<p>Inherited from Points.clone</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:363</li>
 								</ul>
@@ -1212,7 +1222,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> recursive: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1220,12 +1230,12 @@
 					<a name="copy" class="tsd-anchor"></a>
 					<h3>copy</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a>, recursive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a>, recursive<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.copy</p>
+								<p>Inherited from Points.copy</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:370</li>
 								</ul>
@@ -1233,7 +1243,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>source: <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h5>
+									<h5>source: <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> recursive: <span class="tsd-signature-type">boolean</span></h5>
@@ -1241,7 +1251,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1254,7 +1264,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.dispatchEvent</p>
+								<p>Inherited from Points.dispatchEvent</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:46</li>
 								</ul>
@@ -1291,7 +1301,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.getObjectById</p>
+								<p>Inherited from Points.getObjectById</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:326</li>
 								</ul>
@@ -1323,7 +1333,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.getObjectByName</p>
+								<p>Inherited from Points.getObjectByName</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:332</li>
 								</ul>
@@ -1355,7 +1365,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.getObjectByProperty</p>
+								<p>Inherited from Points.getObjectByProperty</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:334</li>
 								</ul>
@@ -1382,7 +1392,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.getWorldDirection</p>
+								<p>Inherited from Points.getWorldDirection</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:339</li>
 								</ul>
@@ -1406,7 +1416,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.getWorldPosition</p>
+								<p>Inherited from Points.getWorldPosition</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:336</li>
 								</ul>
@@ -1430,7 +1440,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.getWorldQuaternion</p>
+								<p>Inherited from Points.getWorldQuaternion</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:337</li>
 								</ul>
@@ -1454,7 +1464,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.getWorldScale</p>
+								<p>Inherited from Points.getWorldScale</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:338</li>
 								</ul>
@@ -1478,7 +1488,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.hasEventListener</p>
+								<p>Inherited from Points.hasEventListener</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:33</li>
 								</ul>
@@ -1534,7 +1544,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.localToWorld</p>
+								<p>Inherited from Points.localToWorld</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:288</li>
 								</ul>
@@ -1566,7 +1576,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.lookAt</p>
+								<p>Inherited from Points.lookAt</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:300</li>
 								</ul>
@@ -1604,9 +1614,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.raycast</p>
+								<p>Inherited from Points.raycast</p>
 								<ul>
-									<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:21</li>
+									<li>Defined in node_modules/@types/three/src/objects/Points.d.ts:35</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1626,12 +1636,12 @@
 					<a name="remove" class="tsd-anchor"></a>
 					<h3>remove</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.remove</p>
+								<p>Inherited from Points.remove</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:310</li>
 								</ul>
@@ -1647,7 +1657,7 @@
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>object: <span class="tsd-signature-type">Object3D</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1660,7 +1670,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.removeEventListener</p>
+								<p>Inherited from Points.removeEventListener</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:40</li>
 								</ul>
@@ -1711,12 +1721,12 @@
 					<a name="rotateonaxis" class="tsd-anchor"></a>
 					<h3>rotate<wbr>OnAxis</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">rotate<wbr>OnAxis<span class="tsd-signature-symbol">(</span>axis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">rotate<wbr>OnAxis<span class="tsd-signature-symbol">(</span>axis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.rotateOnAxis</p>
+								<p>Inherited from Points.rotateOnAxis</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:233</li>
 								</ul>
@@ -1741,7 +1751,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1749,12 +1759,12 @@
 					<a name="rotateonworldaxis" class="tsd-anchor"></a>
 					<h3>rotate<wbr>OnWorld<wbr>Axis</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">rotate<wbr>OnWorld<wbr>Axis<span class="tsd-signature-symbol">(</span>axis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">rotate<wbr>OnWorld<wbr>Axis<span class="tsd-signature-symbol">(</span>axis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.rotateOnWorldAxis</p>
+								<p>Inherited from Points.rotateOnWorldAxis</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:240</li>
 								</ul>
@@ -1779,7 +1789,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1787,12 +1797,12 @@
 					<a name="rotatex" class="tsd-anchor"></a>
 					<h3>rotateX</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">rotateX<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">rotateX<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.rotateX</p>
+								<p>Inherited from Points.rotateX</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:246</li>
 								</ul>
@@ -1805,7 +1815,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1813,12 +1823,12 @@
 					<a name="rotatey" class="tsd-anchor"></a>
 					<h3>rotateY</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">rotateY<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">rotateY<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.rotateY</p>
+								<p>Inherited from Points.rotateY</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:252</li>
 								</ul>
@@ -1831,7 +1841,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1839,12 +1849,12 @@
 					<a name="rotatez" class="tsd-anchor"></a>
 					<h3>rotateZ</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">rotateZ<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">rotateZ<span class="tsd-signature-symbol">(</span>angle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.rotateZ</p>
+								<p>Inherited from Points.rotateZ</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:258</li>
 								</ul>
@@ -1857,7 +1867,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1870,7 +1880,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.setRotationFromAxisAngle</p>
+								<p>Inherited from Points.setRotationFromAxisAngle</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:220</li>
 								</ul>
@@ -1897,7 +1907,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.setRotationFromEuler</p>
+								<p>Inherited from Points.setRotationFromEuler</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:222</li>
 								</ul>
@@ -1921,7 +1931,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.setRotationFromMatrix</p>
+								<p>Inherited from Points.setRotationFromMatrix</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:224</li>
 								</ul>
@@ -1945,7 +1955,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.setRotationFromQuaternion</p>
+								<p>Inherited from Points.setRotationFromQuaternion</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:226</li>
 								</ul>
@@ -1969,7 +1979,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.toJSON</p>
+								<p>Inherited from Points.toJSON</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:361</li>
 								</ul>
@@ -2002,12 +2012,12 @@
 					<a name="translateonaxis" class="tsd-anchor"></a>
 					<h3>translate<wbr>OnAxis</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">translate<wbr>OnAxis<span class="tsd-signature-symbol">(</span>axis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">translate<wbr>OnAxis<span class="tsd-signature-symbol">(</span>axis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.translateOnAxis</p>
+								<p>Inherited from Points.translateOnAxis</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:264</li>
 								</ul>
@@ -2027,7 +2037,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -2035,12 +2045,12 @@
 					<a name="translatex" class="tsd-anchor"></a>
 					<h3>translateX</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">translateX<span class="tsd-signature-symbol">(</span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">translateX<span class="tsd-signature-symbol">(</span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.translateX</p>
+								<p>Inherited from Points.translateX</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:270</li>
 								</ul>
@@ -2059,7 +2069,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -2067,12 +2077,12 @@
 					<a name="translatey" class="tsd-anchor"></a>
 					<h3>translateY</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">translateY<span class="tsd-signature-symbol">(</span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">translateY<span class="tsd-signature-symbol">(</span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.translateY</p>
+								<p>Inherited from Points.translateY</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:276</li>
 								</ul>
@@ -2091,7 +2101,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -2099,12 +2109,12 @@
 					<a name="translatez" class="tsd-anchor"></a>
 					<h3>translateZ</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">translateZ<span class="tsd-signature-symbol">(</span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+						<li class="tsd-signature tsd-kind-icon">translateZ<span class="tsd-signature-symbol">(</span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.translateZ</p>
+								<p>Inherited from Points.translateZ</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:282</li>
 								</ul>
@@ -2123,7 +2133,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="lib_models.keplerpoints.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerPoints</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -2136,7 +2146,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.traverse</p>
+								<p>Inherited from Points.traverse</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:343</li>
 								</ul>
@@ -2178,7 +2188,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.traverseAncestors</p>
+								<p>Inherited from Points.traverseAncestors</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:347</li>
 								</ul>
@@ -2220,7 +2230,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.traverseVisible</p>
+								<p>Inherited from Points.traverseVisible</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:345</li>
 								</ul>
@@ -2262,7 +2272,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.updateMatrix</p>
+								<p>Inherited from Points.updateMatrix</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:352</li>
 								</ul>
@@ -2285,7 +2295,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.updateMatrixWorld</p>
+								<p>Inherited from Points.updateMatrixWorld</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:357</li>
 								</ul>
@@ -2314,9 +2324,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.updateMorphTargets</p>
+								<p>Inherited from Points.updateMorphTargets</p>
 								<ul>
-									<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:20</li>
+									<li>Defined in node_modules/@types/three/src/objects/Points.d.ts:36</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2332,7 +2342,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.updateWorldMatrix</p>
+								<p>Inherited from Points.updateWorldMatrix</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:359</li>
 								</ul>
@@ -2359,7 +2369,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Mesh.worldToLocal</p>
+								<p>Inherited from Points.worldToLocal</p>
 								<ul>
 									<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:294</li>
 								</ul>
@@ -2430,267 +2440,267 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="lib_models.keplermesh.html" class="tsd-kind-icon">Kepler<wbr>Mesh</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="lib_models.keplermesh.html" class="tsd-kind-icon">Kepler<wbr>Mesh</a>
+						<a href="lib_models.keplerpoints.html" class="tsd-kind-icon">Kepler<wbr>Points</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="lib_models.keplermesh.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="lib_models.keplerpoints.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#animations" class="tsd-kind-icon">animations</a>
+								<a href="lib_models.keplerpoints.html#animations" class="tsd-kind-icon">animations</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#castshadow" class="tsd-kind-icon">cast<wbr>Shadow</a>
+								<a href="lib_models.keplerpoints.html#castshadow" class="tsd-kind-icon">cast<wbr>Shadow</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#children" class="tsd-kind-icon">children</a>
+								<a href="lib_models.keplerpoints.html#children" class="tsd-kind-icon">children</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#customdepthmaterial" class="tsd-kind-icon">custom<wbr>Depth<wbr>Material</a>
+								<a href="lib_models.keplerpoints.html#customdepthmaterial" class="tsd-kind-icon">custom<wbr>Depth<wbr>Material</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#customdistancematerial" class="tsd-kind-icon">custom<wbr>Distance<wbr>Material</a>
+								<a href="lib_models.keplerpoints.html#customdistancematerial" class="tsd-kind-icon">custom<wbr>Distance<wbr>Material</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="lib_models.keplermesh.html#dataframe" class="tsd-kind-icon">dataframe</a>
+								<a href="lib_models.keplerpoints.html#dataframe" class="tsd-kind-icon">dataframe</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#frustumculled" class="tsd-kind-icon">frustum<wbr>Culled</a>
+								<a href="lib_models.keplerpoints.html#frustumculled" class="tsd-kind-icon">frustum<wbr>Culled</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#geometry" class="tsd-kind-icon">geometry</a>
+								<a href="lib_models.keplerpoints.html#geometry" class="tsd-kind-icon">geometry</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#id" class="tsd-kind-icon">id</a>
+								<a href="lib_models.keplerpoints.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#ismesh" class="tsd-kind-icon">is<wbr>Mesh</a>
+								<a href="lib_models.keplerpoints.html#isobject3d" class="tsd-kind-icon">is<wbr>Object3D</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#isobject3d" class="tsd-kind-icon">is<wbr>Object3D</a>
+								<a href="lib_models.keplerpoints.html#ispoints" class="tsd-kind-icon">is<wbr>Points</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#layers" class="tsd-kind-icon">layers</a>
+								<a href="lib_models.keplerpoints.html#layers" class="tsd-kind-icon">layers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#material" class="tsd-kind-icon">material</a>
+								<a href="lib_models.keplerpoints.html#material" class="tsd-kind-icon">material</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#matrix" class="tsd-kind-icon">matrix</a>
+								<a href="lib_models.keplerpoints.html#matrix" class="tsd-kind-icon">matrix</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#matrixautoupdate" class="tsd-kind-icon">matrix<wbr>Auto<wbr>Update</a>
+								<a href="lib_models.keplerpoints.html#matrixautoupdate" class="tsd-kind-icon">matrix<wbr>Auto<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#matrixworld" class="tsd-kind-icon">matrix<wbr>World</a>
+								<a href="lib_models.keplerpoints.html#matrixworld" class="tsd-kind-icon">matrix<wbr>World</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#matrixworldneedsupdate" class="tsd-kind-icon">matrix<wbr>World<wbr>Needs<wbr>Update</a>
+								<a href="lib_models.keplerpoints.html#matrixworldneedsupdate" class="tsd-kind-icon">matrix<wbr>World<wbr>Needs<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#modelviewmatrix" class="tsd-kind-icon">model<wbr>View<wbr>Matrix</a>
+								<a href="lib_models.keplerpoints.html#modelviewmatrix" class="tsd-kind-icon">model<wbr>View<wbr>Matrix</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#morphtargetdictionary" class="tsd-kind-icon">morph<wbr>Target<wbr>Dictionary</a>
+								<a href="lib_models.keplerpoints.html#morphtargetdictionary" class="tsd-kind-icon">morph<wbr>Target<wbr>Dictionary</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#morphtargetinfluences" class="tsd-kind-icon">morph<wbr>Target<wbr>Influences</a>
+								<a href="lib_models.keplerpoints.html#morphtargetinfluences" class="tsd-kind-icon">morph<wbr>Target<wbr>Influences</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#name" class="tsd-kind-icon">name</a>
+								<a href="lib_models.keplerpoints.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#normalmatrix" class="tsd-kind-icon">normal<wbr>Matrix</a>
+								<a href="lib_models.keplerpoints.html#normalmatrix" class="tsd-kind-icon">normal<wbr>Matrix</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#onafterrender" class="tsd-kind-icon">on<wbr>After<wbr>Render</a>
+								<a href="lib_models.keplerpoints.html#onafterrender" class="tsd-kind-icon">on<wbr>After<wbr>Render</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#onbeforerender" class="tsd-kind-icon">on<wbr>Before<wbr>Render</a>
+								<a href="lib_models.keplerpoints.html#onbeforerender" class="tsd-kind-icon">on<wbr>Before<wbr>Render</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#parent" class="tsd-kind-icon">parent</a>
+								<a href="lib_models.keplerpoints.html#parent" class="tsd-kind-icon">parent</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#position" class="tsd-kind-icon">position</a>
+								<a href="lib_models.keplerpoints.html#position" class="tsd-kind-icon">position</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#quaternion" class="tsd-kind-icon">quaternion</a>
+								<a href="lib_models.keplerpoints.html#quaternion" class="tsd-kind-icon">quaternion</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#receiveshadow" class="tsd-kind-icon">receive<wbr>Shadow</a>
+								<a href="lib_models.keplerpoints.html#receiveshadow" class="tsd-kind-icon">receive<wbr>Shadow</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#renderorder" class="tsd-kind-icon">render<wbr>Order</a>
+								<a href="lib_models.keplerpoints.html#renderorder" class="tsd-kind-icon">render<wbr>Order</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#rotation" class="tsd-kind-icon">rotation</a>
+								<a href="lib_models.keplerpoints.html#rotation" class="tsd-kind-icon">rotation</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#scale" class="tsd-kind-icon">scale</a>
+								<a href="lib_models.keplerpoints.html#scale" class="tsd-kind-icon">scale</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#type" class="tsd-kind-icon">type</a>
+								<a href="lib_models.keplerpoints.html#type" class="tsd-kind-icon">type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#up" class="tsd-kind-icon">up</a>
+								<a href="lib_models.keplerpoints.html#up" class="tsd-kind-icon">up</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#userdata" class="tsd-kind-icon">user<wbr>Data</a>
+								<a href="lib_models.keplerpoints.html#userdata" class="tsd-kind-icon">user<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#uuid" class="tsd-kind-icon">uuid</a>
+								<a href="lib_models.keplerpoints.html#uuid" class="tsd-kind-icon">uuid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#visible" class="tsd-kind-icon">visible</a>
+								<a href="lib_models.keplerpoints.html#visible" class="tsd-kind-icon">visible</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-								<a href="lib_models.keplermesh.html#defaultmatrixautoupdate" class="tsd-kind-icon">Default<wbr>Matrix<wbr>Auto<wbr>Update</a>
+								<a href="lib_models.keplerpoints.html#defaultmatrixautoupdate" class="tsd-kind-icon">Default<wbr>Matrix<wbr>Auto<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static tsd-is-external">
-								<a href="lib_models.keplermesh.html#defaultup" class="tsd-kind-icon">Default<wbr>Up</a>
+								<a href="lib_models.keplerpoints.html#defaultup" class="tsd-kind-icon">Default<wbr>Up</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#add" class="tsd-kind-icon">add</a>
+								<a href="lib_models.keplerpoints.html#add" class="tsd-kind-icon">add</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a>
+								<a href="lib_models.keplerpoints.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#applymatrix4" class="tsd-kind-icon">apply<wbr>Matrix4</a>
+								<a href="lib_models.keplerpoints.html#applymatrix4" class="tsd-kind-icon">apply<wbr>Matrix4</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#applyquaternion" class="tsd-kind-icon">apply<wbr>Quaternion</a>
+								<a href="lib_models.keplerpoints.html#applyquaternion" class="tsd-kind-icon">apply<wbr>Quaternion</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#attach" class="tsd-kind-icon">attach</a>
+								<a href="lib_models.keplerpoints.html#attach" class="tsd-kind-icon">attach</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#clear" class="tsd-kind-icon">clear</a>
+								<a href="lib_models.keplerpoints.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#clone" class="tsd-kind-icon">clone</a>
+								<a href="lib_models.keplerpoints.html#clone" class="tsd-kind-icon">clone</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#copy" class="tsd-kind-icon">copy</a>
+								<a href="lib_models.keplerpoints.html#copy" class="tsd-kind-icon">copy</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a>
+								<a href="lib_models.keplerpoints.html#dispatchevent" class="tsd-kind-icon">dispatch<wbr>Event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#getobjectbyid" class="tsd-kind-icon">get<wbr>Object<wbr>ById</a>
+								<a href="lib_models.keplerpoints.html#getobjectbyid" class="tsd-kind-icon">get<wbr>Object<wbr>ById</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#getobjectbyname" class="tsd-kind-icon">get<wbr>Object<wbr>ByName</a>
+								<a href="lib_models.keplerpoints.html#getobjectbyname" class="tsd-kind-icon">get<wbr>Object<wbr>ByName</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#getobjectbyproperty" class="tsd-kind-icon">get<wbr>Object<wbr>ByProperty</a>
+								<a href="lib_models.keplerpoints.html#getobjectbyproperty" class="tsd-kind-icon">get<wbr>Object<wbr>ByProperty</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#getworlddirection" class="tsd-kind-icon">get<wbr>World<wbr>Direction</a>
+								<a href="lib_models.keplerpoints.html#getworlddirection" class="tsd-kind-icon">get<wbr>World<wbr>Direction</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#getworldposition" class="tsd-kind-icon">get<wbr>World<wbr>Position</a>
+								<a href="lib_models.keplerpoints.html#getworldposition" class="tsd-kind-icon">get<wbr>World<wbr>Position</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#getworldquaternion" class="tsd-kind-icon">get<wbr>World<wbr>Quaternion</a>
+								<a href="lib_models.keplerpoints.html#getworldquaternion" class="tsd-kind-icon">get<wbr>World<wbr>Quaternion</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#getworldscale" class="tsd-kind-icon">get<wbr>World<wbr>Scale</a>
+								<a href="lib_models.keplerpoints.html#getworldscale" class="tsd-kind-icon">get<wbr>World<wbr>Scale</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a>
+								<a href="lib_models.keplerpoints.html#haseventlistener" class="tsd-kind-icon">has<wbr>Event<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#localtoworld" class="tsd-kind-icon">local<wbr>ToWorld</a>
+								<a href="lib_models.keplerpoints.html#localtoworld" class="tsd-kind-icon">local<wbr>ToWorld</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#lookat" class="tsd-kind-icon">look<wbr>At</a>
+								<a href="lib_models.keplerpoints.html#lookat" class="tsd-kind-icon">look<wbr>At</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#raycast" class="tsd-kind-icon">raycast</a>
+								<a href="lib_models.keplerpoints.html#raycast" class="tsd-kind-icon">raycast</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#remove" class="tsd-kind-icon">remove</a>
+								<a href="lib_models.keplerpoints.html#remove" class="tsd-kind-icon">remove</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a>
+								<a href="lib_models.keplerpoints.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#rotateonaxis" class="tsd-kind-icon">rotate<wbr>OnAxis</a>
+								<a href="lib_models.keplerpoints.html#rotateonaxis" class="tsd-kind-icon">rotate<wbr>OnAxis</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#rotateonworldaxis" class="tsd-kind-icon">rotate<wbr>OnWorld<wbr>Axis</a>
+								<a href="lib_models.keplerpoints.html#rotateonworldaxis" class="tsd-kind-icon">rotate<wbr>OnWorld<wbr>Axis</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#rotatex" class="tsd-kind-icon">rotateX</a>
+								<a href="lib_models.keplerpoints.html#rotatex" class="tsd-kind-icon">rotateX</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#rotatey" class="tsd-kind-icon">rotateY</a>
+								<a href="lib_models.keplerpoints.html#rotatey" class="tsd-kind-icon">rotateY</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#rotatez" class="tsd-kind-icon">rotateZ</a>
+								<a href="lib_models.keplerpoints.html#rotatez" class="tsd-kind-icon">rotateZ</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#setrotationfromaxisangle" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Axis<wbr>Angle</a>
+								<a href="lib_models.keplerpoints.html#setrotationfromaxisangle" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Axis<wbr>Angle</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#setrotationfromeuler" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Euler</a>
+								<a href="lib_models.keplerpoints.html#setrotationfromeuler" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Euler</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#setrotationfrommatrix" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Matrix</a>
+								<a href="lib_models.keplerpoints.html#setrotationfrommatrix" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Matrix</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#setrotationfromquaternion" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Quaternion</a>
+								<a href="lib_models.keplerpoints.html#setrotationfromquaternion" class="tsd-kind-icon">set<wbr>Rotation<wbr>From<wbr>Quaternion</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#tojson" class="tsd-kind-icon">toJSON</a>
+								<a href="lib_models.keplerpoints.html#tojson" class="tsd-kind-icon">toJSON</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#translateonaxis" class="tsd-kind-icon">translate<wbr>OnAxis</a>
+								<a href="lib_models.keplerpoints.html#translateonaxis" class="tsd-kind-icon">translate<wbr>OnAxis</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#translatex" class="tsd-kind-icon">translateX</a>
+								<a href="lib_models.keplerpoints.html#translatex" class="tsd-kind-icon">translateX</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#translatey" class="tsd-kind-icon">translateY</a>
+								<a href="lib_models.keplerpoints.html#translatey" class="tsd-kind-icon">translateY</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#translatez" class="tsd-kind-icon">translateZ</a>
+								<a href="lib_models.keplerpoints.html#translatez" class="tsd-kind-icon">translateZ</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#traverse" class="tsd-kind-icon">traverse</a>
+								<a href="lib_models.keplerpoints.html#traverse" class="tsd-kind-icon">traverse</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#traverseancestors" class="tsd-kind-icon">traverse<wbr>Ancestors</a>
+								<a href="lib_models.keplerpoints.html#traverseancestors" class="tsd-kind-icon">traverse<wbr>Ancestors</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#traversevisible" class="tsd-kind-icon">traverse<wbr>Visible</a>
+								<a href="lib_models.keplerpoints.html#traversevisible" class="tsd-kind-icon">traverse<wbr>Visible</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#updatematrix" class="tsd-kind-icon">update<wbr>Matrix</a>
+								<a href="lib_models.keplerpoints.html#updatematrix" class="tsd-kind-icon">update<wbr>Matrix</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#updatematrixworld" class="tsd-kind-icon">update<wbr>Matrix<wbr>World</a>
+								<a href="lib_models.keplerpoints.html#updatematrixworld" class="tsd-kind-icon">update<wbr>Matrix<wbr>World</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#updatemorphtargets" class="tsd-kind-icon">update<wbr>Morph<wbr>Targets</a>
+								<a href="lib_models.keplerpoints.html#updatemorphtargets" class="tsd-kind-icon">update<wbr>Morph<wbr>Targets</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#updateworldmatrix" class="tsd-kind-icon">update<wbr>World<wbr>Matrix</a>
+								<a href="lib_models.keplerpoints.html#updateworldmatrix" class="tsd-kind-icon">update<wbr>World<wbr>Matrix</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-								<a href="lib_models.keplermesh.html#worldtolocal" class="tsd-kind-icon">world<wbr>ToLocal</a>
+								<a href="lib_models.keplerpoints.html#worldtolocal" class="tsd-kind-icon">world<wbr>ToLocal</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="lib_models.keplerpoints.html" class="tsd-kind-icon">Kepler<wbr>Points</a>
-					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="lib_models.skinconfiguration.html" class="tsd-kind-icon">Skin<wbr>Configuration</a>
 					</li>

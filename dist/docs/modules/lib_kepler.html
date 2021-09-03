@@ -73,6 +73,8 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="lib_kepler.html#createbuffergeometry" class="tsd-kind-icon">create<wbr>Buffer<wbr>Geometry</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="lib_kepler.html#createkeplermesh" class="tsd-kind-icon">create<wbr>Kepler<wbr>Mesh</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="lib_kepler.html#createkeplerpoints" class="tsd-kind-icon">create<wbr>Kepler<wbr>Points</a></li>
 							</ul>
 						</section>
 					</div>
@@ -84,22 +86,22 @@
 					<a name="createbuffergeometry" class="tsd-anchor"></a>
 					<h3>create<wbr>Buffer<wbr>Geometry</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Buffer<wbr>Geometry<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>indices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>positions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Buffer<wbr>Geometry<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>indices<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>positions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/1ee8b6d/src/lib/kepler.ts#L6">src/lib/kepler.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/kepler.ts#L9">src/lib/kepler.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>indices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>positions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>indices<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>positions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
-											<h5>indices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> indices<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span></h5>
 										</li>
 										<li class="tsd-parameter">
 											<h5>positions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
@@ -108,6 +110,58 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="createkeplermesh" class="tsd-anchor"></a>
+					<h3>create<wbr>Kepler<wbr>Mesh</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Kepler<wbr>Mesh<span class="tsd-signature-symbol">(</span>df<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataFrame</span>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/kepler.ts#L31">src/lib/kepler.ts:31</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>df: <span class="tsd-signature-type">DataFrame</span></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/lib_models.keplermesh.html" class="tsd-signature-type" data-tsd-kind="Class">KeplerMesh</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="createkeplerpoints" class="tsd-anchor"></a>
+					<h3>create<wbr>Kepler<wbr>Points</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Kepler<wbr>Points<span class="tsd-signature-symbol">(</span>df<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DataFrame</span>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Points</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/kepler.ts#L41">src/lib/kepler.ts:41</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>df: <span class="tsd-signature-type">DataFrame</span></h5>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Points</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -123,7 +177,13 @@
 						<a href="auto_generated.html">auto_<wbr>generated</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="lib_iso_contours_module.html">lib/iso-<wbr>contours.module</a>
+						<a href="lib_color_map.html">lib/color-<wbr>map</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_icons.html">lib/icons</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_iso_contours_skin_module.html">lib/iso-<wbr>contours-<wbr>skin.module</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="lib_kepler.html">lib/kepler</a>
@@ -141,6 +201,12 @@
 						<a href="lib_models.html">lib/models</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="lib_points_skin_module.html">lib/points-<wbr>skin.module</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="lib_utils.html">lib/utils</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="lib_views_viewer_widgets_view.html">lib/views/viewer-<wbr>widgets.view</a>
 					</li>
 				</ul>
@@ -149,6 +215,12 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="lib_kepler.html#createbuffergeometry" class="tsd-kind-icon">create<wbr>Buffer<wbr>Geometry</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="lib_kepler.html#createkeplermesh" class="tsd-kind-icon">create<wbr>Kepler<wbr>Mesh</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="lib_kepler.html#createkeplerpoints" class="tsd-kind-icon">create<wbr>Kepler<wbr>Points</a>
 					</li>
 				</ul>
 			</nav>
@@ -163,6 +235,9 @@
 				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
