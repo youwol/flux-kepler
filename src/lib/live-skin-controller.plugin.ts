@@ -1,5 +1,5 @@
 import * as _ from 'lodash'
-import {BuilderView, expectAnyOf, Flux, freeContract, Schema} from '@youwol/flux-core'
+import {BuilderView, Context, expectAnyOf, Flux, Schema} from '@youwol/flux-core'
 
 import { pack } from './main'
 import { map as dfMap } from '@youwol/dataframe'
@@ -189,16 +189,50 @@ export namespace PluginLiveSkinController {
         }
     }
 
+    export interface MeshShadingarameters extends ShadingParameters{
+        deformActivated: boolean
+        deformFactor: number
+        columnDeform: string
+        metalness: number
+        roughness: number
+    }
+
     export class MeshShadingSkin extends ShadingSkinBase<KeplerMesh>{
 
+        deformActivated$ : BehaviorSubject<boolean>
+        deformFactor$ : BehaviorSubject<number>
+        columnDeform$ : BehaviorSubject<string>
+
+        metalness$ :BehaviorSubject<number>
+        roughness$ :BehaviorSubject<number>
+
         constructor(
-            body: KeplerMesh, params:ShadingParameters) {
+            body: KeplerMesh, params: MeshShadingarameters) {
             super(body, params)
-            this.connect()
+
+            this.deformFactor$ =  new BehaviorSubject<number>(params.deformFactor != undefined ? params.deformFactor : 0)
+            let defaultColumn = Object.keys(body.dataframe.series)[0]
+            this.columnDeform$ = new BehaviorSubject<string>(params.columnDeform != undefined ? params.columnDeform : defaultColumn)
+            this.metalness$ = new BehaviorSubject<number>(params.metalness != undefined ? params.metalness : 0)
+            this.roughness$ = new BehaviorSubject<number>(params.roughness != undefined ? params.roughness : 0)
+            this.deformActivated$ = new BehaviorSubject<boolean>(params.deformActivated != undefined ? params.deformActivated : false)
+            this.connect( this.deformActivated$, this.deformFactor$, this.columnDeform$, this.metalness$, this.roughness$ )
         }
 
-        createMesh(obsSerie, lut, minNormalized, maxNormalized, linesCount, opacity: number) {
+        parameters(){
+            return {...super.parameters(),...{
+                deformActivated: this.deformActivated$.getValue(),
+                deformFactor:this.deformFactor$.getValue(),
+                columnDeform: this.columnDeform$.getValue(),
+                metalness: this.metalness$.getValue(),
+                roughness: this.roughness$.getValue(),
+            } }
+        }
 
+        createMesh(obsSerie, lut, minNormalized, maxNormalized, linesCount, 
+            opacity: number, deformActivated: boolean, deformFactor: number, columnDeform: string, metalness: number, roughness: number) {
+
+            let ctx = new Context("createMesh", {})
             if (!(this.body.geometry instanceof BufferGeometry))
                 throw Error("Only mesh using BufferGeometry can be used")
             
@@ -215,11 +249,23 @@ export namespace PluginLiveSkinController {
                 color: 0xffffff, 
                 vertexColors: true, 
                 side:DoubleSide,            
+                metalness:metalness,
+                roughness:roughness,
+                flatShading: false,
                 transparent: opacity != 1,
                 opacity: opacity
              })
+             
+            let meshDeformed = ModuleIsoContours.deformMesh( 
+                this.body, 
+                {   
+                    deformFunction:(dataframe) => dataframe.series[columnDeform],
+                    deformScalingFactor: deformActivated ? deformFactor : 0
+                },
+                ctx
+                )
             let m = createIsoContours(
-                this.body,
+                meshDeformed,
                 obsSerie, {
                 parameters,
                 material
@@ -229,6 +275,12 @@ export namespace PluginLiveSkinController {
             m.name = this.body.name + "_isoContours"
             m.userData.__fromMesh = this.body.name
             return m
+        }
+
+        validColumnsDeform() : string[]{
+            return Object.entries(this.body.dataframe.series)
+            .filter( ([name, serie]) => serie.itemSize==3)
+            .map( ([name,v]) => name)
         }
     }
 
@@ -352,18 +404,57 @@ export namespace PluginLiveSkinController {
 
     function renderMeshShadingSkinGroupView(title: string, skin: MeshShadingSkin){
 
-        return renderShadingSkinGroupView(title, skin)
+
+        let deformView= (state) => ({
+            children: [
+                selectRow('column', skin.columnDeform$, skin.validColumnsDeform()),
+                sliderRow("factor", 0, 100, skin.deformFactor$) 
+            ]
+        })
+        let headerViewDeform = (state) => headerGrpView('deform', state.expanded$, skin.deformActivated$ )
+        let deformPanel = new ExpandableGroup.View({            
+            state: new ExpandableGroup.State('deform',true), 
+            contentView: deformView, 
+            headerView:headerViewDeform
+        })
+
+        let displayOptions = (state) => ({
+            children: [
+                sliderRow('metalness', 0, 1, skin.metalness$),
+                sliderRow("roughness", 0, 1, skin.roughness$) 
+            ]
+        })
+        let headerViewDisplayOptions = (state) => headerGrpView('display options', state.expanded$, new BehaviorSubject(true) )
+        let displayOptionsPanels = new ExpandableGroup.View({            
+            state: new ExpandableGroup.State('display-options', false), 
+            contentView: displayOptions, 
+            headerView:headerViewDisplayOptions
+        })
+
+        return renderShadingSkinGroupView(title, skin, [deformPanel, displayOptionsPanels])
     }
 
     function renderPointsShadingSkinGroupView(title: string, skin: PointsShadingSkin){
 
-        let size = sliderRow('size', 0, 20, skin.pointSize$)
-        return renderShadingSkinGroupView(title, skin, [size])
+        let contentView= (state) => ({
+            children: [
+                sliderRow('size', 0, 20, skin.pointSize$)
+            ]
+        })
+        let headerView = (state) => headerGrpView('Points', state.expanded$, true) 
+
+        let  panel = new ExpandableGroup.View({            
+            state: new ExpandableGroup.State('points',true), 
+            contentView: contentView, 
+            headerView:headerView
+        })
+        return renderShadingSkinGroupView(title, skin, [panel])
     }
 
     function renderShadingSkinGroupView(
         title: string, 
-        skin: ShadingSkinBase<KeplerObject3D>, withChildren = []) {
+        skin: ShadingSkinBase<KeplerObject3D>, 
+        withPanels = []) {
 
         let column$ = new BehaviorSubject<string>(Object.keys(skin.body.dataframe.series)[0])
 
@@ -379,11 +470,11 @@ export namespace PluginLiveSkinController {
             contentView: contentViewContours, 
             headerView:headerViewContours
         })
+        
             
         let contentView = (state) => ({
             class:'px-1',  
             children:[
-                ...withChildren,
                 {
                     class:'d-flex align-items-center',
                     children:[
@@ -399,6 +490,7 @@ export namespace PluginLiveSkinController {
                 sliderRow('max%', 0, 1, skin.max$),
                 selectRow('color scale', skin.lut$, LookUpTables),
                 contoursPanel,
+                ...withPanels
                 //shadingPanel
             ]
         })
