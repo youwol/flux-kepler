@@ -1,6 +1,6 @@
 {
     "name": "@youwol/flux-kepler",
-    "version": "0.0.6-next",
+    "version": "0.0.7",
     "description": "Collection of modules to work with structured 3D data",
     "author": "",
     "keywords": [
