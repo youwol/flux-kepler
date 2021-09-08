@@ -3,7 +3,7 @@ import { Context, BuilderView, Flux, Schema, ModuleFlux, Pipe, Property} from '@
 import{pack} from './main'
 import { array, IArray, Serie } from '@youwol/dataframe'
 import { createFluxThreeObject3D } from '@youwol/flux-three'
-import { BoxGeometry, DoubleSide, Group, MeshStandardMaterial, Object3D } from 'three'
+import { Box3, DoubleSide, Group, MeshStandardMaterial, Object3D } from 'three'
 import { KeplerMesh, LookUpTables, SkinConfiguration } from './models'
 import {createIsoContours, generateIsos, IsoContoursParameters} from '@youwol/kepler'
 import { svgSkinIcon } from './icons'
@@ -217,7 +217,12 @@ export namespace ModuleIsoContours{
                             lut: configuration.lut
                         })
                         let material =  new MeshStandardMaterial({ color: 0xffffff, vertexColors: true, side:DoubleSide })
-                        let meshDeformed = deformMesh(mesh, configuration, ctx)
+                        let meshDeformed = deformMesh(
+                            mesh, 
+                            {   deformFunction:configuration.getDeformObservableFunction(),
+                                deformScalingFactor: configuration.deformScalingFactor
+                            }, 
+                            ctx)
                         let skin = createIsoContours(meshDeformed,obsSerie,{parameters, material})
                         ctx.info("Contours created")
                         ctx.info("Geometry", skin.geometry )
@@ -248,25 +253,35 @@ export namespace ModuleIsoContours{
      * @param rawMesh 
      * @param configuration 
      */
-    function deformMesh(rawMesh: KeplerMesh, configuration: PersistentData, context: Context){
+    export function deformMesh(
+        rawMesh: KeplerMesh, 
+        parameters: {
+            deformScalingFactor,
+            deformFunction
+        }, 
+        context: Context){
 
+        let normFct = ([x,y,z]) => Math.pow(x*x + y*y + z*z, 0.5)
         return context.withChild(
             `apply deformation`,
             (ctx) => {
-                if(configuration.deformScalingFactor==0){
+                if(parameters.deformScalingFactor==0){
                     ctx.info("Scaling deform factor = 0 => no deformation applied")
                     return rawMesh
                 }
                 let dataframe = rawMesh.dataframe
-                let obsFunction = configuration.getDeformObservableFunction()
-                let obsSerie = obsFunction(dataframe, {})
-                ctx.info("Scaling deform factor = 0 => no deformation applied")
+                
+                let obsSerie = parameters.deformFunction(dataframe, {})
                 ctx.info("Displacement serie", obsSerie)
 
                 if( obsSerie.itemSize != 3 ){
                     throw new Error("The itemSize of the observable serie for deformation should be 3 (i.e. a 3D vector).")
                 }   
-                let factor = configuration.deformScalingFactor
+                let maxNorm = array.max(obsSerie.map(normFct).array)
+                const box = new Box3()
+                box.expandByObject(rawMesh)
+                let meshLength = box.max.sub(box.min).length()
+                let factor = parameters.deformScalingFactor * meshLength / maxNorm /1000
 
                 let displacements = obsSerie.map( ([x,y,z]) => {
                     return [factor*x, factor*y, factor*z]
