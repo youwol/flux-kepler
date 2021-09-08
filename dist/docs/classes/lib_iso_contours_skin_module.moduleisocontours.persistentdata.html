@@ -114,6 +114,8 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#count" class="tsd-kind-icon">count</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#deformobservablefct" class="tsd-kind-icon">deform<wbr>Observable<wbr>Fct</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#deformscalingfactor" class="tsd-kind-icon">deform<wbr>Scaling<wbr>Factor</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#filled" class="tsd-kind-icon">filled</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#locklut" class="tsd-kind-icon">lock<wbr>Lut</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#lut" class="tsd-kind-icon">lut</a></li>
@@ -127,9 +129,10 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#defaultcode" class="tsd-kind-icon">default<wbr>Code</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#getdeformobservablefunction" class="tsd-kind-icon">get<wbr>Deform<wbr>Observable<wbr>Function</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#getobservablefunction" class="tsd-kind-icon">get<wbr>Observable<wbr>Function</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#getobservableserie" class="tsd-kind-icon">get<wbr>Observable<wbr>Serie</a></li>
 							</ul>
@@ -143,23 +146,29 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Persistent<wbr>Data<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>filled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>lut<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>others<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Persistent<wbr>Data<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>deformObservableFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>deformScalingFactor<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>filled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>lut<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>others<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="lib_models.skinconfiguration.html">SkinConfiguration</a>.<a href="lib_models.skinconfiguration.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/iso-contours-skin.module.ts#L108">src/lib/iso-contours-skin.module.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L139">src/lib/iso-contours-skin.module.ts:139</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>filled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>lut<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>others<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>deformObservableFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>deformScalingFactor<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>filled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>lut<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>others<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
 											<h5><span class="tsd-flag ts-flagOptional">Optional</span> count<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> deform<wbr>Observable<wbr>Fct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> deform<wbr>Scaling<wbr>Factor<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
 										</li>
 										<li class="tsd-parameter">
 											<h5><span class="tsd-flag ts-flagOptional">Optional</span> filled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
@@ -186,7 +195,7 @@
 					<div class="tsd-signature tsd-kind-icon">count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/iso-contours-skin.module.ts#L93">src/lib/iso-contours-skin.module.ts:93</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L94">src/lib/iso-contours-skin.module.ts:94</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -196,12 +205,42 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="deformobservablefct" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> deform<wbr>Observable<wbr>Fct</h3>
+					<div class="tsd-signature tsd-kind-icon">deform<wbr>Observable<wbr>Fct<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L114">src/lib/iso-contours-skin.module.ts:114</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Deformation function, only used if scaling factor is not zero</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="deformscalingfactor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> deform<wbr>Scaling<wbr>Factor</h3>
+					<div class="tsd-signature tsd-kind-icon">deform<wbr>Scaling<wbr>Factor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L133">src/lib/iso-contours-skin.module.ts:133</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Scaling factor</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="filled" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> filled</h3>
 					<div class="tsd-signature tsd-kind-icon">filled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/iso-contours-skin.module.ts#L85">src/lib/iso-contours-skin.module.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L86">src/lib/iso-contours-skin.module.ts:86</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -216,7 +255,7 @@
 					<div class="tsd-signature tsd-kind-icon">lock<wbr>Lut<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/iso-contours-skin.module.ts#L105">src/lib/iso-contours-skin.module.ts:105</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L136">src/lib/iso-contours-skin.module.ts:136</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -226,7 +265,7 @@
 					<div class="tsd-signature tsd-kind-icon">lut<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &#x27;Rainbow&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/iso-contours-skin.module.ts#L102">src/lib/iso-contours-skin.module.ts:102</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L103">src/lib/iso-contours-skin.module.ts:103</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -241,7 +280,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/iso-contours-skin.module.ts#L108">src/lib/iso-contours-skin.module.ts:108</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L139">src/lib/iso-contours-skin.module.ts:139</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -251,7 +290,7 @@
 					<div class="tsd-signature tsd-kind-icon">min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/iso-contours-skin.module.ts#L107">src/lib/iso-contours-skin.module.ts:107</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L138">src/lib/iso-contours-skin.module.ts:138</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -296,7 +335,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="lib_models.skinconfiguration.html">SkinConfiguration</a>.<a href="lib_models.skinconfiguration.html#observablefunction">observableFunction</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/models.ts#L141">src/lib/models.ts:141</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/models.ts#L141">src/lib/models.ts:141</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -328,7 +367,7 @@
 					<div class="tsd-signature tsd-kind-icon">reversed<wbr>Lut<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/iso-contours-skin.module.ts#L106">src/lib/iso-contours-skin.module.ts:106</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L137">src/lib/iso-contours-skin.module.ts:137</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -355,13 +394,51 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="lib_models.skinconfiguration.html">SkinConfiguration</a>.<a href="lib_models.skinconfiguration.html#defaultcode">defaultCode</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/models.ts#L107">src/lib/models.ts:107</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/models.ts#L107">src/lib/models.ts:107</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getdeformobservablefunction" class="tsd-anchor"></a>
+					<h3>get<wbr>Deform<wbr>Observable<wbr>Function</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Deform<wbr>Observable<wbr>Function<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/iso-contours-skin.module.ts#L119">src/lib/iso-contours-skin.module.ts:119</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-signature">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>DataFrame: <span class="tsd-signature-type">any</span></h5>
+												</li>
+												<li>
+													<h5>any: <span class="tsd-signature-type">any</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="getobservablefunction" class="tsd-anchor"></a>
 					<h3>get<wbr>Observable<wbr>Function</h3>
@@ -373,7 +450,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="lib_models.skinconfiguration.html">SkinConfiguration</a>.<a href="lib_models.skinconfiguration.html#getobservablefunction">getObservableFunction</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/models.ts#L143">src/lib/models.ts:143</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/models.ts#L143">src/lib/models.ts:143</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>DataFrame<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, any<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Serie</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IArray</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -412,7 +489,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="lib_models.skinconfiguration.html">SkinConfiguration</a>.<a href="lib_models.skinconfiguration.html#getobservableserie">getObservableSerie</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/9094bc1/src/lib/models.ts#L151">src/lib/models.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-kepler/blob/726d438/src/lib/models.ts#L151">src/lib/models.ts:151</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -496,6 +573,12 @@
 								<a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#count" class="tsd-kind-icon">count</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#deformobservablefct" class="tsd-kind-icon">deform<wbr>Observable<wbr>Fct</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#deformscalingfactor" class="tsd-kind-icon">deform<wbr>Scaling<wbr>Factor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#filled" class="tsd-kind-icon">filled</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -528,6 +611,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 								<a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#defaultcode" class="tsd-kind-icon">default<wbr>Code</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#getdeformobservablefunction" class="tsd-kind-icon">get<wbr>Deform<wbr>Observable<wbr>Function</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="lib_iso_contours_skin_module.moduleisocontours.persistentdata.html#getobservablefunction" class="tsd-kind-icon">get<wbr>Observable<wbr>Function</a>
 							</li>
@@ -538,6 +624,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="../modules/lib_iso_contours_skin_module.moduleisocontours.html#deformmesh" class="tsd-kind-icon">deform<wbr>Mesh</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="../modules/lib_iso_contours_skin_module.moduleisocontours.html#getisovalues" class="tsd-kind-icon">get<wbr>Iso<wbr>Values</a>
 					</li>
@@ -551,14 +640,15 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-			</ul>
-			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
