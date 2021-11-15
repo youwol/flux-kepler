@@ -11,7 +11,7 @@ export function keplerObjectsExpectation(typeName: string, attNames: string[], K
                 Type: KeplerType, attNames
             }),
             expectAllOf({
-                description: 'A group of 3D objects containing KeplerPoints',
+                description: `A group of 3D objects containing ${typeName}`,
                 when: [
                     expectInstanceOf({ typeName: 'Group', Type: Group }),
                     expect({
