@@ -7,3 +7,4 @@ export * from './lib/iso-contours-skin.module';
 export * from './lib/points-skin.module';
 export * from './lib/models';
 export * from './lib/live-skin-controller.plugin';
+export * from './lib/borders-skin.module';
